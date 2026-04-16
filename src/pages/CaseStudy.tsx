@@ -210,7 +210,7 @@ function CaseStudy() {
             <img
               src="/screenshots/homescreen.png"
               alt="Quest Log home screen"
-              style={{ width: '100%', height: 'auto', borderRadius: '16px', display: 'block', boxShadow: '0 4px 20px rgba(0,0,0,0.08)' }}
+              style={{ width: '100%', maxWidth: '280px', height: 'auto', borderRadius: '16px', display: 'block', boxShadow: '0 4px 20px rgba(0,0,0,0.08)', margin: '0 auto' }}
             />
             <p style={{
               fontFamily: 'Inter, sans-serif',
@@ -302,6 +302,7 @@ function CaseStudy() {
             { src: '/screenshots/active set 2.jpg', caption: 'Active Workout: exercise tracking' },
             { src: '/screenshots/active break.jpg', caption: 'Active Break: built-in rest timer' },
             { src: '/screenshots/Spin screenshot.jpg', caption: 'Rest Day: spin for Swoll Coins' },
+            { src: '/screenshots/excel.jpg', caption: 'Using Excel or standard workout apps is stale and lifeless. Tracking reps in a spreadsheet makes fitness feel like admin work, not an adventure.' },
           ]} />
         </div>
       </section>
