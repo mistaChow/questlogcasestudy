@@ -22,6 +22,12 @@
   to   { opacity: 1; transform: translateX(0); }
 }
 
+@media (max-width: 767px) {
+  .carousel-img-wrapper {
+    max-width: 100% !important;
+  }
+}
+
 @layer base {
   :root {
     --color-bg: #FFFBF5;

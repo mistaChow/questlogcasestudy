@@ -57,7 +57,7 @@ function ScreenshotCarousel({ slides, maxWidth = '320px' }: ScreenshotCarouselPr
       <div style={{ position: 'relative', padding: '0 52px' }}>
 
         {/* Centred image wrapper — sets the maxWidth & overflow */}
-        <div style={{ maxWidth, margin: '0 auto', position: 'relative', lineHeight: 0 }}>
+        <div className="carousel-img-wrapper" style={{ maxWidth, margin: '0 auto', position: 'relative', lineHeight: 0 }}>
 
           {/* Incoming (in-flow — provides container height during crossfade) */}
           {transitioning && incoming !== null && (
