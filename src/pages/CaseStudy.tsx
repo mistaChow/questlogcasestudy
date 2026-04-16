@@ -317,6 +317,7 @@ function CaseStudy() {
                 icon: '⚔️',
                 title: 'Custom Quest Builder',
                 wip: false,
+                video: null,
                 description: 'Build any workout from scratch across three phases — Warm-Up, Main, and Cool-Down. Saved as reusable templates, not one-time checklists. Run the same quest a hundred times or build a new one every session.',
               },
               {
@@ -324,6 +325,7 @@ function CaseStudy() {
                 icon: '🧪',
                 title: 'My Stash',
                 wip: false,
+                video: null,
                 description: 'Track your supplements like an in-game inventory. Visual stock levels, custom icons, and a quick daily log. Running low shows visually before you run out. Your pre-workout is basically a health potion.',
               },
               {
@@ -331,6 +333,8 @@ function CaseStudy() {
                 icon: '🪙',
                 title: 'Gold Coins & Rewards',
                 wip: true,
+                video: '/videos/treasure.mp4',
+                videoPoster: '/videos/treasure.png',
                 description: 'Complete a quest, earn coins. Take a rest day, pull the slot machine for a chance at bonus gold. Coins will unlock in-game rewards as the currency system develops. The economy is still being designed.',
               },
               {
@@ -338,6 +342,7 @@ function CaseStudy() {
                 icon: '🗺️',
                 title: 'Journey Map',
                 wip: true,
+                video: null,
                 description: 'Your progress visualised as a hand-illustrated RPG world. Each region is a new zone unlocked through consistent training. Six regions planned — Iron Field Woods, Plains of Sorrows, Emberveil Peaks, Skullpeak Glaciers, Sunken Ruins of Aldara, Stormreach Cliffs.',
               },
             ].map((card, i) => (
@@ -350,54 +355,77 @@ function CaseStudy() {
                   borderTop: `4px solid ${card.accent}`,
                   borderRadius: '16px',
                   boxShadow: '0 4px 0 0 rgba(0,0,0,0.07)',
-                  padding: '28px',
+                  overflow: 'hidden',
                   transition: 'transform 0.15s ease, box-shadow 0.15s ease',
                 }}
               >
-                <span style={{ fontSize: '2.2rem', display: 'block', marginBottom: '14px' }}>
-                  {card.icon}
-                </span>
-                <p
-                  style={{
-                    fontFamily: 'Outfit, sans-serif',
-                    fontWeight: 700,
-                    color: '#1C1009',
-                    fontSize: '1.05rem',
-                    margin: 0,
-                  }}
-                >
-                  {card.title}
-                </p>
-                <p
-                  style={{
-                    fontFamily: 'Inter, sans-serif',
-                    fontWeight: 500,
-                    color: '#78716C',
-                    fontSize: '0.88rem',
-                    lineHeight: 1.65,
-                    marginTop: '8px',
-                  }}
-                >
-                  {card.description}
-                </p>
-                {card.wip && (
-                  <span
+                {/* Looping video asset (optional) */}
+                {card.video && (
+                  <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    poster={'videoPoster' in card ? card.videoPoster : undefined}
                     style={{
-                      display: 'inline-flex',
-                      background: '#FEF3C7',
-                      color: '#92400E',
-                      border: '1px solid #FCD34D',
-                      borderRadius: '9999px',
-                      padding: '3px 10px',
-                      fontFamily: 'Outfit, sans-serif',
-                      fontWeight: 600,
-                      fontSize: '0.7rem',
-                      marginTop: '12px',
+                      display: 'block',
+                      width: '100%',
+                      height: 'auto',
                     }}
                   >
-                    ✦ WIP
-                  </span>
+                    <source src={card.video} type="video/mp4" />
+                    {'videoPoster' in card && card.videoPoster && (
+                      <img src={card.videoPoster} alt={card.title} style={{ width: '100%', height: 'auto', display: 'block' }} />
+                    )}
+                  </video>
                 )}
+
+                <div style={{ padding: '28px' }}>
+                  <span style={{ fontSize: '2.2rem', display: 'block', marginBottom: '14px' }}>
+                    {card.icon}
+                  </span>
+                  <p
+                    style={{
+                      fontFamily: 'Outfit, sans-serif',
+                      fontWeight: 700,
+                      color: '#1C1009',
+                      fontSize: '1.05rem',
+                      margin: 0,
+                    }}
+                  >
+                    {card.title}
+                  </p>
+                  <p
+                    style={{
+                      fontFamily: 'Inter, sans-serif',
+                      fontWeight: 500,
+                      color: '#78716C',
+                      fontSize: '0.88rem',
+                      lineHeight: 1.65,
+                      marginTop: '8px',
+                    }}
+                  >
+                    {card.description}
+                  </p>
+                  {card.wip && (
+                    <span
+                      style={{
+                        display: 'inline-flex',
+                        background: '#FEF3C7',
+                        color: '#92400E',
+                        border: '1px solid #FCD34D',
+                        borderRadius: '9999px',
+                        padding: '3px 10px',
+                        fontFamily: 'Outfit, sans-serif',
+                        fontWeight: 600,
+                        fontSize: '0.7rem',
+                        marginTop: '12px',
+                      }}
+                    >
+                      ✦ WIP
+                    </span>
+                  )}
+                </div>
               </div>
             ))}
           </div>
