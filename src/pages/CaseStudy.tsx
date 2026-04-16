@@ -585,8 +585,9 @@ function CaseStudy() {
                 padding: '6px 14px',
               }}
             >
+              <img src="/icons/icon-swollcoin.png" alt="Swoll Coin" style={{ width: '16px', height: '16px', objectFit: 'contain' }} />
               <span style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 600, fontSize: '0.8rem', color: '#92400E' }}>
-                🪙 Swoll Coins · Planned Feature
+                Swoll Coins · Planned Feature
               </span>
             </div>
           </div>
