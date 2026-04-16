@@ -328,10 +328,11 @@ function CaseStudy() {
               },
               {
                 accent: '#65A30D',
-                icon: '🧪',
+                icon: '',
                 title: 'My Stash',
                 wip: false,
                 video: null,
+                staticImage: '/icons/stash-backpack.png',
                 description: 'Track your supplements like an in-game inventory. Visual stock levels, custom icons, and a quick daily log. Running low shows visually before you run out. Your pre-workout is basically a health potion.',
               },
               {
@@ -390,6 +391,16 @@ function CaseStudy() {
                 {'iconCycle' in card && card.iconCycle && (
                   <div style={{ padding: '28px 28px 0', display: 'flex', justifyContent: 'center' }}>
                     <CyclingIcon images={card.iconCycle} interval={2000} size={120} />
+                  </div>
+                )}
+
+                {'staticImage' in card && card.staticImage && (
+                  <div style={{ padding: '28px 28px 0', display: 'flex', justifyContent: 'center' }}>
+                    <img
+                      src={card.staticImage as string}
+                      alt=""
+                      style={{ width: 120, height: 120, objectFit: 'contain', display: 'block' }}
+                    />
                   </div>
                 )}
 
