@@ -7,9 +7,10 @@ interface Slide {
 
 interface ScreenshotCarouselProps {
   slides: Slide[]
+  maxWidth?: string
 }
 
-function ScreenshotCarousel({ slides }: ScreenshotCarouselProps) {
+function ScreenshotCarousel({ slides, maxWidth = '320px' }: ScreenshotCarouselProps) {
   const [current, setCurrent] = useState(0)
   const [fading, setFading] = useState(false)
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
@@ -37,7 +38,7 @@ function ScreenshotCarousel({ slides }: ScreenshotCarouselProps) {
           style={{
             display: 'block',
             width: '100%',
-            maxWidth: '320px',
+            maxWidth: maxWidth,
             height: 'auto',
             margin: '0 auto',
             borderRadius: '20px',
