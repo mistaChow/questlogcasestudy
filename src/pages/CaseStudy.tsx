@@ -792,7 +792,7 @@ function CaseStudy() {
           </p>
 
           <ScreenshotCarousel
-            maxWidth="100%"
+            maxWidth="85%"
             slides={[
               { src: '/journeymap/Frame 5.png', caption: 'Haunted Marshes · Skullpeak Glaciers' },
               { src: '/journeymap/Frame 6.png', caption: 'Aquasword Fields · Plains of Sorrows' },
