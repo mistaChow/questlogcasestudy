@@ -778,9 +778,11 @@ function CaseStudy() {
           <ScreenshotCarousel
             maxWidth="65%"
             slides={[
-              { src: '/journeymap/Frame 5.png', caption: 'Haunted Marshes · Skullpeak Glaciers' },
-              { src: '/journeymap/Frame 6.png', caption: 'Aquasword Fields · Plains of Sorrows' },
-              { src: '/journeymap/Frame 7.png', caption: 'Flowerfield Vale · Emberveil Peaks' },
+              { src: '/journeymap/Frame 5.png', caption: 'Haunted Marshes · Emberveil Peaks' },
+              { src: '/journeymap/Frame 6.png', caption: 'Aquasword Fields · Field of Bones' },
+              { src: '/journeymap/Frame 8.png', caption: 'Ancient Sands · Crystal Caverns' },
+              { src: '/journeymap/Frame 9.png', caption: 'Ruined Wastes · Sunken Depths' },
+              { src: '/journeymap/Frame 10.png', caption: 'Flowerfield Vale · Skullpeak Glaciers' },
             ]}
           />
         </div>
