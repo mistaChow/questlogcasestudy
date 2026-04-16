@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Nunito:wght@400;700;800&family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-bg: #FFFBF5;
+    --color-brown: #1C1009;
+    --color-orange: #F97316;
+    --color-orange-dark: #C2410C;
+    --color-orange-light: #FEF3C7;
+    --color-green: #65A30D;
+    --color-gold: #EAB308;
+    --color-blue: #0EA5E9;
+    --color-muted: #78716C;
+    --color-subtle: #A8A29E;
+    --color-border: #E7E5E4;
+  }
+
+  body {
+    margin: 0;
+    background: #FFFBF5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
