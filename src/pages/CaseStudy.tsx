@@ -389,7 +389,7 @@ function CaseStudy() {
 
                 {'iconCycle' in card && card.iconCycle && (
                   <div style={{ padding: '28px 28px 0', display: 'flex', justifyContent: 'center' }}>
-                    <CyclingIcon images={card.iconCycle} interval={1000} size={120} />
+                    <CyclingIcon images={card.iconCycle} interval={2000} size={120} />
                   </div>
                 )}
 
