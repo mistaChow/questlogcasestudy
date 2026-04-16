@@ -4,6 +4,24 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ── Carousel slide transitions ───────────────────────────── */
+@keyframes cs-slide-out-next {
+  from { opacity: 1; transform: translateX(0); }
+  to   { opacity: 0; transform: translateX(-32px); }
+}
+@keyframes cs-slide-out-prev {
+  from { opacity: 1; transform: translateX(0); }
+  to   { opacity: 0; transform: translateX(32px); }
+}
+@keyframes cs-slide-in-next {
+  from { opacity: 0; transform: translateX(32px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes cs-slide-in-prev {
+  from { opacity: 0; transform: translateX(-32px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
 @layer base {
   :root {
     --color-bg: #FFFBF5;

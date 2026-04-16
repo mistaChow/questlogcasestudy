@@ -10,47 +10,91 @@ interface ScreenshotCarouselProps {
   maxWidth?: string
 }
 
+const ANIM_MS = 300
+
 function ScreenshotCarousel({ slides, maxWidth = '320px' }: ScreenshotCarouselProps) {
   const [current, setCurrent] = useState(0)
-  const [fading, setFading] = useState(false)
+  const [incoming, setIncoming] = useState<number | null>(null)
+  const [direction, setDirection] = useState<1 | -1>(1)
+  const [transitioning, setTransitioning] = useState(false)
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
 
-  const goTo = (index: number) => {
-    if (fading || index === current) return
+  const goTo = (index: number, dir: 1 | -1) => {
+    if (transitioning || index === current) return
     if (timerRef.current) clearTimeout(timerRef.current)
-    setFading(true)
+    setDirection(dir)
+    setIncoming(index)
+    setTransitioning(true)
     timerRef.current = setTimeout(() => {
       setCurrent(index)
-      setFading(false)
-    }, 180)
+      setIncoming(null)
+      setTransitioning(false)
+    }, ANIM_MS)
   }
 
-  const prev = () => goTo((current - 1 + slides.length) % slides.length)
-  const next = () => goTo((current + 1) % slides.length)
+  const prev = () => goTo((current - 1 + slides.length) % slides.length, -1)
+  const next = () => goTo((current + 1) % slides.length, 1)
+
+  // Which slide the user is "on" — update dots/counter immediately
+  const activeIndex = incoming !== null ? incoming : current
+
+  const outAnim = direction === 1 ? 'cs-slide-out-next' : 'cs-slide-out-prev'
+  const inAnim  = direction === 1 ? 'cs-slide-in-next'  : 'cs-slide-in-prev'
+  const animDur = `${ANIM_MS}ms`
+
+  const imgBase: React.CSSProperties = {
+    display: 'block',
+    width: '100%',
+    height: 'auto',
+    borderRadius: '20px',
+    boxShadow: '0 8px 32px rgba(0,0,0,0.12)',
+  }
 
   return (
     <div style={{ marginTop: '48px' }}>
-      {/* Image area */}
+
+      {/* ── Image area ── */}
       <div style={{ position: 'relative', padding: '0 52px' }}>
-        <img
-          src={slides[current].src}
-          alt={slides[current].caption}
-          style={{
-            display: 'block',
-            width: '100%',
-            maxWidth: maxWidth,
-            height: 'auto',
-            margin: '0 auto',
-            borderRadius: '20px',
-            boxShadow: '0 8px 32px rgba(0,0,0,0.12)',
-            opacity: fading ? 0 : 1,
-            transition: 'opacity 0.18s ease',
-          }}
-        />
+
+        {/* Centred image wrapper — sets the maxWidth & overflow */}
+        <div style={{ maxWidth, margin: '0 auto', position: 'relative', lineHeight: 0 }}>
+
+          {/* Incoming (in-flow — provides container height during crossfade) */}
+          {transitioning && incoming !== null && (
+            <img
+              src={slides[incoming].src}
+              alt={slides[incoming].caption}
+              style={{
+                ...imgBase,
+                animation: `${inAnim} ${animDur} ease forwards`,
+              }}
+            />
+          )}
+
+          {/* Current (absolute overlay while transitioning, normal flow otherwise) */}
+          <img
+            src={slides[current].src}
+            alt={slides[current].caption}
+            style={{
+              ...imgBase,
+              ...(transitioning ? {
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: '100%',
+                animation: `${outAnim} ${animDur} ease forwards`,
+              } : {}),
+            }}
+          />
+        </div>
 
         {/* Prev button */}
         <button
           onClick={prev}
+          onMouseDown={e => (e.currentTarget.style.transform = 'translateY(-50%) scale(0.9)')}
+          onMouseUp={e   => (e.currentTarget.style.transform = 'translateY(-50%) scale(1.08)')}
+          onMouseLeave={e => (e.currentTarget.style.transform = 'translateY(-50%) scale(1)')}
+          onMouseEnter={e => (e.currentTarget.style.transform = 'translateY(-50%) scale(1.08)')}
           style={{
             position: 'absolute',
             left: 0,
@@ -69,6 +113,7 @@ function ScreenshotCarousel({ slides, maxWidth = '320px' }: ScreenshotCarouselPr
             fontSize: '1rem',
             color: '#1C1009',
             flexShrink: 0,
+            transition: 'transform 0.12s ease, box-shadow 0.12s ease',
           }}
           aria-label="Previous"
         >
@@ -78,6 +123,10 @@ function ScreenshotCarousel({ slides, maxWidth = '320px' }: ScreenshotCarouselPr
         {/* Next button */}
         <button
           onClick={next}
+          onMouseDown={e => (e.currentTarget.style.transform = 'translateY(-50%) scale(0.9)')}
+          onMouseUp={e   => (e.currentTarget.style.transform = 'translateY(-50%) scale(1.08)')}
+          onMouseLeave={e => (e.currentTarget.style.transform = 'translateY(-50%) scale(1)')}
+          onMouseEnter={e => (e.currentTarget.style.transform = 'translateY(-50%) scale(1.08)')}
           style={{
             position: 'absolute',
             right: 0,
@@ -96,6 +145,7 @@ function ScreenshotCarousel({ slides, maxWidth = '320px' }: ScreenshotCarouselPr
             fontSize: '1rem',
             color: '#1C1009',
             flexShrink: 0,
+            transition: 'transform 0.12s ease, box-shadow 0.12s ease',
           }}
           aria-label="Next"
         >
@@ -103,7 +153,7 @@ function ScreenshotCarousel({ slides, maxWidth = '320px' }: ScreenshotCarouselPr
         </button>
       </div>
 
-      {/* Caption */}
+      {/* ── Caption (cross-fades with the slide) ── */}
       <p style={{
         fontFamily: 'Inter, sans-serif',
         fontWeight: 400,
@@ -114,13 +164,13 @@ function ScreenshotCarousel({ slides, maxWidth = '320px' }: ScreenshotCarouselPr
         marginTop: '16px',
         marginBottom: 0,
         minHeight: '1.4em',
-        opacity: fading ? 0 : 1,
-        transition: 'opacity 0.18s ease',
+        opacity: transitioning ? 0 : 1,
+        transition: `opacity ${ANIM_MS * 0.5}ms ease`,
       }}>
-        {slides[current].caption}
+        {slides[activeIndex].caption}
       </p>
 
-      {/* Dot indicators */}
+      {/* ── Dot indicators ── */}
       <div style={{
         display: 'flex',
         justifyContent: 'center',
@@ -130,13 +180,13 @@ function ScreenshotCarousel({ slides, maxWidth = '320px' }: ScreenshotCarouselPr
         {slides.map((_, i) => (
           <button
             key={i}
-            onClick={() => goTo(i)}
+            onClick={() => goTo(i, i > current ? 1 : -1)}
             aria-label={`Go to slide ${i + 1}`}
             style={{
-              width: i === current ? '20px' : '8px',
+              width: i === activeIndex ? '20px' : '8px',
               height: '8px',
               borderRadius: '9999px',
-              background: i === current ? '#F97316' : '#D6D3D1',
+              background: i === activeIndex ? '#F97316' : '#D6D3D1',
               border: 'none',
               padding: 0,
               cursor: 'pointer',
@@ -146,7 +196,7 @@ function ScreenshotCarousel({ slides, maxWidth = '320px' }: ScreenshotCarouselPr
         ))}
       </div>
 
-      {/* Counter */}
+      {/* ── Counter ── */}
       <p style={{
         fontFamily: 'Outfit, sans-serif',
         fontWeight: 600,
@@ -157,8 +207,9 @@ function ScreenshotCarousel({ slides, maxWidth = '320px' }: ScreenshotCarouselPr
         marginBottom: 0,
         letterSpacing: '0.05em',
       }}>
-        {current + 1} / {slides.length}
+        {activeIndex + 1} / {slides.length}
       </p>
+
     </div>
   )
 }

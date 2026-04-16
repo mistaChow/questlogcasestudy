@@ -704,10 +704,16 @@ function CaseStudy() {
                     fontSize: '0.9rem',
                     lineHeight: 1.8,
                     display: 'flex',
-                    alignItems: 'baseline',
+                    alignItems: 'flex-start',
+                    gap: '10px',
                   }}
                 >
-                  <span style={{ color: '#F97316', marginRight: '10px', flexShrink: 0 }}>✦</span>
+                  <img
+                    src="/icons/icon-checkmark.png"
+                    srcSet="/icons/icon-checkmark.png 1x, /icons/icon-checkmark@2x.png 2x, /icons/icon-checkmark@3x.png 3x"
+                    alt=""
+                    style={{ width: '16px', height: '16px', objectFit: 'contain', display: 'block', flexShrink: 0, marginTop: '3px' }}
+                  />
                   {item}
                 </p>
               ))}
