@@ -697,7 +697,8 @@ function CaseStudy() {
                 'Hero character progression + avatar',
                 'Micro-animations and polish pass',
                 'All six journey map regions fully built',
-                'Regional shops — spend gold coins on outfits and build your own dungeon gym',
+                'Regional shops — spend Swoll Coins on outfits and gear',
+                'Dungeon Gym — buy and upgrade your personal training space using Swoll Coins',
               ].map((item, i) => (
                 <p
                   key={i}
