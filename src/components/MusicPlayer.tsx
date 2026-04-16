@@ -178,7 +178,7 @@ function MusicPlayer() {
               userSelect: 'none',
             }}
           >
-            {playing ? 'Now Playing' : 'Music Off'}
+            {playing ? 'Quest Log Theme' : 'Music Off'}
           </span>
 
           {/* Volume toggle */}
