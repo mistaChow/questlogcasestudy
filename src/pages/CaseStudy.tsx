@@ -333,6 +333,7 @@ function CaseStudy() {
                 icon: '',
                 title: 'Custom Quest Builder',
                 wip: false,
+                shipped: true,
                 video: null,
                 iconCycle: [
                   { src: '/icons/quest-sword.png', srcSet: '/icons/quest-sword.png 1x, /icons/quest-sword@2x.png 2x, /icons/quest-sword@3x.png 3x', alt: 'Sword' },
@@ -349,6 +350,7 @@ function CaseStudy() {
                 icon: '',
                 title: 'My Stash',
                 wip: false,
+                shipped: true,
                 video: '/videos/potions3.mp4',
                 description: 'Track your supplements like an in-game inventory. Visual stock levels, custom icons, and a quick daily log. Running low shows visually before you run out. Your pre-workout is basically a health potion.',
               },
@@ -356,7 +358,8 @@ function CaseStudy() {
                 accent: '#EAB308',
                 icon: '',
                 title: 'Gold Coins & Rewards',
-                wip: true,
+                wip: false,
+                shipped: true,
                 video: '/videos/treasure.mp4',
                 videoPoster: '/videos/treasure.png',
                 description: 'Complete a quest, earn coins. Take a rest day, pull the slot machine for a chance at bonus gold. Coins will unlock in-game rewards as the currency system develops. The economy is still being designed.',
@@ -472,6 +475,32 @@ function CaseStudy() {
                         style={{ width: '12px', height: '12px', objectFit: 'contain', display: 'block' }}
                       />
                       WIP
+                    </span>
+                  )}
+                  {'shipped' in card && card.shipped && (
+                    <span
+                      style={{
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: '5px',
+                        background: '#F0FDF4',
+                        color: '#166534',
+                        border: '1px solid #86EFAC',
+                        borderRadius: '9999px',
+                        padding: '3px 10px',
+                        fontFamily: 'Outfit, sans-serif',
+                        fontWeight: 600,
+                        fontSize: '0.7rem',
+                        marginTop: '12px',
+                      }}
+                    >
+                      <img
+                        src="/icons/icon-checkmark.png"
+                        srcSet="/icons/icon-checkmark.png 1x, /icons/icon-checkmark@2x.png 2x, /icons/icon-checkmark@3x.png 3x"
+                        alt=""
+                        style={{ width: '12px', height: '12px', objectFit: 'contain', display: 'block' }}
+                      />
+                      Shipped
                     </span>
                   )}
                   </div>
