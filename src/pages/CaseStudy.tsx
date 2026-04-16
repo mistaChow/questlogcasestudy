@@ -588,9 +588,8 @@ function CaseStudy() {
               </p>
               {[
                 'Quest builder with Warm-Up / Main / Cool-Down',
-                'Supplement inventory (My Stash)',
-                'Gold coin reward system + animated coin sequence',
-                'Rest day slot machine',
+                'Supplement inventory (My Stash) — stock levels tracked as Stocked, Low, and Out; supports external URLs for quick re-ordering (e.g. Amazon)',
+                'Swoll Coins reward system — earn coins on quest completion with an animated coin sequence',
                 'Built-in timer for prep time, breaks, and isometric holds — with audio cues',
                 'Rest day rewards — slot machine mechanics to spin for Swoll Coins on off days, preserving streaks',
                 'Active workout tab — displays the currently running workout in real time',
