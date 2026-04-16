@@ -100,7 +100,13 @@ function CaseStudy() {
                 padding: '6px 14px',
               }}
             >
-              🚧 Work in Progress
+              <img
+                src="/icons/icon-pickaxec.png"
+                srcSet="/icons/icon-pickaxec.png 1x, /icons/icon-pickaxec@2x.png 2x, /icons/icon-pickaxec@3x.png 3x"
+                alt=""
+                style={{ width: '14px', height: '14px', objectFit: 'contain', marginRight: '6px', verticalAlign: 'middle' }}
+              />
+              Work in Progress
             </span>
             <span
               style={{
@@ -451,7 +457,13 @@ function CaseStudy() {
                         marginTop: '12px',
                       }}
                     >
-                      ✦ WIP
+                      <img
+                        src="/icons/icon-pickaxec.png"
+                        srcSet="/icons/icon-pickaxec.png 1x, /icons/icon-pickaxec@2x.png 2x, /icons/icon-pickaxec@3x.png 3x"
+                        alt=""
+                        style={{ width: '12px', height: '12px', objectFit: 'contain', marginRight: '5px' }}
+                      />
+                      WIP
                     </span>
                   )}
                   </div>
