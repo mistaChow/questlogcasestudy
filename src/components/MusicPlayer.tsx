@@ -6,11 +6,17 @@ function MusicPlayer() {
   const [volume, setVolume] = useState(0.5)
   const [expanded, setExpanded] = useState(false)
 
-  // Set initial volume
+  // Set initial volume and autoplay
   useEffect(() => {
-    if (audioRef.current) {
-      audioRef.current.volume = volume
-    }
+    const audio = audioRef.current
+    if (!audio) return
+    audio.volume = volume
+    audio.play().then(() => {
+      setPlaying(true)
+    }).catch(() => {
+      // Browser blocked autoplay — user must interact first
+      setPlaying(false)
+    })
   }, [])
 
   const togglePlay = () => {
