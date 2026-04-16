@@ -309,6 +309,7 @@ function CaseStudy() {
               gridTemplateColumns: '1fr',
               gap: '20px',
               marginTop: '48px',
+              alignItems: 'start',
             }}
             className="features-grid"
           >
@@ -780,6 +781,7 @@ function CaseStudy() {
           }
           .features-grid {
             grid-template-columns: 1fr 1fr !important;
+            align-items: start !important;
           }
           .roadmap-grid {
             grid-template-columns: 1fr 1fr !important;
