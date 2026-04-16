@@ -4,92 +4,63 @@ import ImagePlaceholder from '../components/ImagePlaceholder'
 function CaseStudy() {
   return (
     <div>
-      {/* HERO SECTION */}
+      {/* HERO BANNER */}
       <section
         style={{
-          minHeight: '100svh',
           position: 'relative',
+          width: '100%',
           overflow: 'hidden',
         }}
       >
-        {/* Background layer */}
-        <div
+        {/* Video / PNG fallback */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          poster="/banner.png"
           style={{
-            position: 'absolute',
-            inset: 0,
-            zIndex: 0,
-            background:
-              'radial-gradient(ellipse at 60% 40%, rgba(249,115,22,0.18) 0%, rgba(254,243,199,0.4) 40%, #FFFBF5 100%)',
+            display: 'block',
+            width: '100%',
+            height: 'auto',
           }}
         >
-          <svg width="100%" height="100%" style={{ position: 'absolute', inset: 0, opacity: 0.4 }}>
-            <filter id="noise">
-              <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch" />
-              <feColorMatrix type="saturate" values="0" />
-            </filter>
-            <rect width="100%" height="100%" filter="url(#noise)" opacity="0.08" />
-          </svg>
-        </div>
+          <source src="/banner.mp4" type="video/mp4" />
+          <img src="/banner.png" alt="Quest Log — Your fitness adventure" style={{ width: '100%', height: 'auto', display: 'block' }} />
+        </video>
 
-        {/* Overlay gradient */}
+        {/* Fade into page background at the bottom */}
         <div
           style={{
             position: 'absolute',
             bottom: 0,
             left: 0,
             right: 0,
-            height: '45%',
-            zIndex: 1,
+            height: '30%',
             background: 'linear-gradient(to top, #FFFBF5 0%, transparent 100%)',
+            pointerEvents: 'none',
           }}
         />
 
-        {/* Content */}
+        {/* Badges + scroll indicator */}
         <div
           style={{
-            position: 'relative',
-            zIndex: 2,
+            position: 'absolute',
+            bottom: '32px',
+            left: 0,
+            right: 0,
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
-            justifyContent: 'center',
-            minHeight: '100svh',
-            textAlign: 'center',
-            padding: '24px',
+            gap: '12px',
+            zIndex: 2,
           }}
         >
-          <h1
-            style={{
-              fontFamily: "'Cinzel Decorative', serif",
-              fontWeight: 700,
-              fontSize: 'clamp(2.8rem, 8vw, 5.5rem)',
-              color: '#1C1009',
-              letterSpacing: '0.05em',
-              margin: 0,
-            }}
-          >
-            QUEST LOG
-          </h1>
-
-          <p
-            style={{
-              fontFamily: 'Nunito, sans-serif',
-              fontWeight: 700,
-              fontSize: 'clamp(1rem, 2.5vw, 1.4rem)',
-              color: '#78716C',
-              marginTop: '12px',
-              maxWidth: '480px',
-            }}
-          >
-            Your fitness journey, reframed as an RPG.
-          </p>
-
           <div
             style={{
               display: 'flex',
               gap: '8px',
               justifyContent: 'center',
-              marginTop: '20px',
               flexWrap: 'wrap',
             }}
           >
@@ -109,7 +80,7 @@ function CaseStudy() {
             </span>
             <span
               style={{
-                background: '#F5F5F4',
+                background: 'rgba(245,245,244,0.92)',
                 color: '#78716C',
                 border: '1px solid #E7E5E4',
                 fontFamily: 'Lato, sans-serif',
@@ -125,8 +96,6 @@ function CaseStudy() {
 
           <div
             style={{
-              position: 'absolute',
-              bottom: '32px',
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
