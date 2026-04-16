@@ -309,7 +309,6 @@ function CaseStudy() {
               gridTemplateColumns: '1fr',
               gap: '20px',
               marginTop: '48px',
-              alignItems: 'start',
             }}
             className="features-grid"
           >
@@ -371,43 +370,36 @@ function CaseStudy() {
                   transition: 'transform 0.15s ease, box-shadow 0.15s ease',
                 }}
               >
-                {/* Looping video asset (optional) */}
-                {card.video && (
-                  <video
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    poster={'videoPoster' in card ? card.videoPoster : undefined}
-                    style={{
-                      display: 'block',
-                      width: '50%',
-                      height: 'auto',
-                      margin: '20px auto 0',
-                    }}
-                  >
-                    <source src={card.video} type="video/mp4" />
-                    {'videoPoster' in card && card.videoPoster && (
-                      <img src={card.videoPoster} alt={card.title} style={{ width: '100%', height: 'auto', display: 'block' }} />
-                    )}
-                  </video>
-                )}
-
-                {'iconCycle' in card && card.iconCycle && (
-                  <div style={{ padding: '28px 28px 0', display: 'flex', justifyContent: 'center' }}>
-                    <CyclingIcon images={card.iconCycle} interval={2000} size={120} />
-                  </div>
-                )}
-
-                {'staticImage' in card && card.staticImage && (
-                  <div style={{ padding: '28px 28px 0', display: 'flex', justifyContent: 'center' }}>
+                {/* Media area — fixed height so all cards stay equal */}
+                <div style={{
+                  height: '220px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  overflow: 'hidden',
+                  background: 'white',
+                }}>
+                  {card.video ? (
+                    <video
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      poster={'videoPoster' in card ? card.videoPoster as string : undefined}
+                      style={{ maxHeight: '100%', maxWidth: '80%', width: 'auto', display: 'block' }}
+                    >
+                      <source src={card.video} type="video/mp4" />
+                    </video>
+                  ) : 'iconCycle' in card && card.iconCycle ? (
+                    <CyclingIcon images={card.iconCycle} interval={2000} size={140} />
+                  ) : 'staticImage' in card && card.staticImage ? (
                     <img
                       src={card.staticImage as string}
                       alt=""
-                      style={{ width: ('staticImageSize' in card ? card.staticImageSize as number : 120), height: ('staticImageSize' in card ? card.staticImageSize as number : 120), objectFit: 'contain', display: 'block' }}
+                      style={{ maxHeight: '100%', maxWidth: '80%', objectFit: 'contain', display: 'block' }}
                     />
-                  </div>
-                )}
+                  ) : null}
+                </div>
 
                 <div style={{ padding: '28px' }}>
                   {card.icon && (
@@ -781,7 +773,6 @@ function CaseStudy() {
           }
           .features-grid {
             grid-template-columns: 1fr 1fr !important;
-            align-items: start !important;
           }
           .roadmap-grid {
             grid-template-columns: 1fr 1fr !important;
