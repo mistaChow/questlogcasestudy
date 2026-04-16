@@ -1,5 +1,4 @@
 import SectionHeader from '../components/SectionHeader'
-import ImagePlaceholder from '../components/ImagePlaceholder'
 import CyclingIcon from '../components/CyclingIcon'
 
 function CaseStudy() {
@@ -194,7 +193,11 @@ function CaseStudy() {
               The problem isn't motivation. It's that the experience of tracking has no texture to it. Nothing makes it feel like progress. Nothing makes you feel like the kind of person who shows up. It's admin. And admin is easy to skip.
             </p>
           </div>
-          <ImagePlaceholder aspectRatio="3/4" caption="The before state. A spreadsheet that doesn't care if you come back." />
+          <img
+            src="/screenshots/active set.jpg"
+            alt="Quest Log — Active workout tracking"
+            style={{ width: '100%', height: 'auto', borderRadius: '16px', display: 'block' }}
+          />
         </div>
 
         {/* SOLUTION BLOCK */}
@@ -274,19 +277,31 @@ function CaseStudy() {
             className="masonry-grid"
           >
             {[
-              { aspectRatio: '4/5', caption: 'Quest Builder — Warm-Up / Main / Cool-Down' },
-              { aspectRatio: '3/4', caption: 'Journey Map — Iron Field Woods region' },
-              { aspectRatio: '4/5', caption: 'My Stash — Supplement inventory' },
-              { aspectRatio: '1/1', caption: 'Quest Complete — Coin reward sequence' },
-              { aspectRatio: '3/4', caption: 'Rest Day — Slot machine' },
-              { aspectRatio: '4/5', caption: 'Stats Bar — Streak, coins, total workouts' },
+              { src: '/screenshots/Quest example.jpg', caption: 'Quest Builder — Warm-Up / Main / Cool-Down' },
+              { src: '/screenshots/quest board screenshot.jpg', caption: 'Quest Board — Active quests' },
+              { src: '/screenshots/Inventory.jpg', caption: 'My Stash — Supplement inventory' },
+              { src: '/screenshots/active set 2.jpg', caption: 'Active Workout — Exercise tracking' },
+              { src: '/screenshots/Spin screenshot.jpg', caption: 'Rest Day — Spin for Swoll Coins' },
+              { src: '/screenshots/streaks.jpg', caption: 'Stats — Streak, Swoll Coins, total workouts' },
+              { src: '/screenshots/active break.jpg', caption: 'Active Break — Built-in rest timer' },
             ].map((item, i) => (
-              <ImagePlaceholder
-                key={i}
-                aspectRatio={item.aspectRatio}
-                caption={item.caption}
-                className="masonry-item"
-              />
+              <div key={i} className="masonry-item">
+                <img
+                  src={item.src}
+                  alt={item.caption}
+                  style={{ width: '100%', height: 'auto', borderRadius: '12px', display: 'block' }}
+                />
+                <p style={{
+                  fontFamily: 'Inter, sans-serif',
+                  fontWeight: 400,
+                  fontStyle: 'italic',
+                  color: '#78716C',
+                  fontSize: '0.8rem',
+                  textAlign: 'center',
+                  marginTop: '8px',
+                  marginBottom: 0,
+                }}>{item.caption}</p>
+              </div>
             ))}
           </div>
         </div>
