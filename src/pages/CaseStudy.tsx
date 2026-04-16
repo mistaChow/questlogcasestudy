@@ -333,6 +333,7 @@ function CaseStudy() {
                 wip: false,
                 video: null,
                 staticImage: '/icons/stash-backpack.png',
+                staticImageSize: 160,
                 description: 'Track your supplements like an in-game inventory. Visual stock levels, custom icons, and a quick daily log. Running low shows visually before you run out. Your pre-workout is basically a health potion.',
               },
               {
@@ -346,10 +347,12 @@ function CaseStudy() {
               },
               {
                 accent: '#0EA5E9',
-                icon: '🗺️',
+                icon: '',
                 title: 'Journey Map',
                 wip: true,
                 video: null,
+                staticImage: '/icons/nav-map.png',
+                staticImageSize: 120,
                 description: 'Your progress visualised as a hand-illustrated RPG world. Each region is a new zone unlocked through consistent training. Six regions planned — Iron Field Woods, Plains of Sorrows, Emberveil Peaks, Skullpeak Glaciers, Sunken Ruins of Aldara, Stormreach Cliffs.',
               },
             ].map((card, i) => (
@@ -378,7 +381,7 @@ function CaseStudy() {
                       display: 'block',
                       width: '50%',
                       height: 'auto',
-                      margin: '0 auto',
+                      margin: '20px auto 0',
                     }}
                   >
                     <source src={card.video} type="video/mp4" />
@@ -399,7 +402,7 @@ function CaseStudy() {
                     <img
                       src={card.staticImage as string}
                       alt=""
-                      style={{ width: 120, height: 120, objectFit: 'contain', display: 'block' }}
+                      style={{ width: ('staticImageSize' in card ? card.staticImageSize as number : 120), height: ('staticImageSize' in card ? card.staticImageSize as number : 120), objectFit: 'contain', display: 'block' }}
                     />
                   </div>
                 )}
