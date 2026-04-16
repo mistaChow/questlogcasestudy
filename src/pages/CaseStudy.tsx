@@ -631,7 +631,7 @@ function CaseStudy() {
           }}
         >
           <a
-            href="#"
+            href="https://quest-log-case-study.vercel.app"
             className="btn-primary"
             style={{
               background: '#F97316',
