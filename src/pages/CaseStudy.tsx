@@ -126,7 +126,7 @@ function CaseStudy() {
                 padding: '6px 14px',
               }}
             >
-              Personal Project · 2025–Present
+              Personal Project
             </span>
           </div>
 
@@ -801,7 +801,7 @@ function CaseStudy() {
             marginTop: '8px',
           }}
         >
-          Designed & developed by Kevin Chow · 2025–Present
+          Designed & developed by Kevin Chow
         </p>
         <div
           style={{
