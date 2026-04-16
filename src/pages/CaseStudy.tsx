@@ -1,5 +1,6 @@
 import SectionHeader from '../components/SectionHeader'
 import CyclingIcon from '../components/CyclingIcon'
+import ScreenshotCarousel from '../components/ScreenshotCarousel'
 
 function CaseStudy() {
   return (
@@ -267,43 +268,16 @@ function CaseStudy() {
             </p>
           </div>
 
-          {/* Masonry image grid */}
-          <div
-            style={{
-              marginTop: '48px',
-              columns: '2',
-              columnGap: '16px',
-            }}
-            className="masonry-grid"
-          >
-            {[
-              { src: '/screenshots/Quest example.jpg', caption: 'Quest Builder — Warm-Up / Main / Cool-Down' },
-              { src: '/screenshots/quest board screenshot.jpg', caption: 'Quest Board — Active quests' },
-              { src: '/screenshots/Inventory.jpg', caption: 'My Stash — Supplement inventory' },
-              { src: '/screenshots/active set 2.jpg', caption: 'Active Workout — Exercise tracking' },
-              { src: '/screenshots/Spin screenshot.jpg', caption: 'Rest Day — Spin for Swoll Coins' },
-              { src: '/screenshots/streaks.jpg', caption: 'Stats — Streak, Swoll Coins, total workouts' },
-              { src: '/screenshots/active break.jpg', caption: 'Active Break — Built-in rest timer' },
-            ].map((item, i) => (
-              <div key={i} className="masonry-item">
-                <img
-                  src={item.src}
-                  alt={item.caption}
-                  style={{ width: '100%', height: 'auto', borderRadius: '12px', display: 'block' }}
-                />
-                <p style={{
-                  fontFamily: 'Inter, sans-serif',
-                  fontWeight: 400,
-                  fontStyle: 'italic',
-                  color: '#78716C',
-                  fontSize: '0.8rem',
-                  textAlign: 'center',
-                  marginTop: '8px',
-                  marginBottom: 0,
-                }}>{item.caption}</p>
-              </div>
-            ))}
-          </div>
+          {/* Screenshot carousel */}
+          <ScreenshotCarousel slides={[
+            { src: '/screenshots/Quest example.jpg', caption: 'Quest Builder — Warm-Up / Main / Cool-Down' },
+            { src: '/screenshots/quest board screenshot.jpg', caption: 'Quest Board — Active quests' },
+            { src: '/screenshots/Inventory.jpg', caption: 'My Stash — Supplement inventory' },
+            { src: '/screenshots/active set 2.jpg', caption: 'Active Workout — Exercise tracking' },
+            { src: '/screenshots/active break.jpg', caption: 'Active Break — Built-in rest timer' },
+            { src: '/screenshots/Spin screenshot.jpg', caption: 'Rest Day — Spin for Swoll Coins' },
+            { src: '/screenshots/streaks.jpg', caption: 'Stats — Streak, Swoll Coins, total workouts' },
+          ]} />
         </div>
       </section>
 
@@ -769,6 +743,10 @@ function CaseStudy() {
       </footer>
 
       <style>{`
+        @keyframes slideIn {
+          from { opacity: 0; transform: translateX(12px); }
+          to   { opacity: 1; transform: translateX(0); }
+        }
         @keyframes iconFadeIn {
           from { opacity: 0; transform: scale(0.88); }
           to   { opacity: 1; transform: scale(1); }
