@@ -59,7 +59,7 @@ function CaseStudy() {
         >
           {/* View Live App CTA */}
           <a
-            href="https://quest-log-case-study.vercel.app"
+            href="https://quest-log-topaz.vercel.app/"
             className="btn-primary"
             style={{
               background: '#F97316',
@@ -793,7 +793,7 @@ function CaseStudy() {
           }}
         >
           <a
-            href="https://quest-log-case-study.vercel.app"
+            href="https://quest-log-topaz.vercel.app/"
             className="btn-primary"
             style={{
               background: '#F97316',
@@ -832,6 +832,18 @@ function CaseStudy() {
             Get in Touch
           </a>
         </div>
+        <p style={{
+          fontFamily: 'Inter, sans-serif',
+          fontWeight: 400,
+          color: '#78716C',
+          fontSize: '0.82rem',
+          marginTop: '20px',
+          marginBottom: 0,
+        }}>
+          <a href="mailto:hello@kevincchow.com" style={{ color: '#78716C', textDecoration: 'none' }}>
+            hello@kevincchow.com
+          </a>
+        </p>
       </footer>
 
       <style>{`
