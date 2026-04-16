@@ -754,22 +754,6 @@ function CaseStudy() {
             </div>
           </div>
 
-          <p
-            style={{
-              marginTop: '48px',
-              textAlign: 'center',
-              fontFamily: 'Inter, sans-serif',
-              fontWeight: 400,
-              fontStyle: 'italic',
-              color: '#A8A29E',
-              fontSize: '0.9rem',
-              maxWidth: '480px',
-              marginLeft: 'auto',
-              marginRight: 'auto',
-            }}
-          >
-            Quest Log is being built in parallel with real gym sessions. Every feature ships because it was needed on a Tuesday morning at 6am, not because it was on a roadmap.
-          </p>
         </div>
       </section>
 
@@ -792,7 +776,7 @@ function CaseStudy() {
           </p>
 
           <ScreenshotCarousel
-            maxWidth="85%"
+            maxWidth="65%"
             slides={[
               { src: '/journeymap/Frame 5.png', caption: 'Haunted Marshes · Skullpeak Glaciers' },
               { src: '/journeymap/Frame 6.png', caption: 'Aquasword Fields · Plains of Sorrows' },
