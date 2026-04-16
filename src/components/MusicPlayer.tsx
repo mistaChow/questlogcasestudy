@@ -82,7 +82,7 @@ function MusicPlayer() {
                 textOverflow: 'ellipsis',
               }}
             >
-              ♪ Heroes of the Loading Screen
+              ♪ Quest Log Theme
             </p>
 
             {/* Volume row */}
