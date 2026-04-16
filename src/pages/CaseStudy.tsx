@@ -98,13 +98,16 @@ function CaseStudy() {
                 fontSize: '0.78rem',
                 borderRadius: '9999px',
                 padding: '6px 14px',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '6px',
               }}
             >
               <img
                 src="/icons/icon-pickaxec.png"
                 srcSet="/icons/icon-pickaxec.png 1x, /icons/icon-pickaxec@2x.png 2x, /icons/icon-pickaxec@3x.png 3x"
                 alt=""
-                style={{ width: '14px', height: '14px', objectFit: 'contain', marginRight: '6px', verticalAlign: 'middle' }}
+                style={{ width: '14px', height: '14px', objectFit: 'contain', display: 'block' }}
               />
               Work in Progress
             </span>
@@ -186,7 +189,7 @@ function CaseStudy() {
                 marginBottom: '16px',
               }}
             >
-              Most fitness apps treat you like a data entry clerk. Log your reps, log your weight, close the app. There's nothing pulling you back tomorrow except willpower — and willpower is not a product feature. The tools that exist either drown you in analytics you don't use or reduce your entire training session to a checkbox.
+              Most fitness apps treat you like a data entry clerk. Log your reps, log your weight, close the app. There's nothing pulling you back tomorrow except willpower, and willpower is not a product feature. The tools that exist either drown you in analytics you don't use or reduce your entire training session to a checkbox.
             </p>
             <p
               style={{
@@ -216,7 +219,7 @@ function CaseStudy() {
               marginBottom: 0,
               lineHeight: 1.6,
             }}>
-              Using Excel or standard workout apps is stale and lifeless — tracking reps in a spreadsheet makes fitness feel like admin work, not an adventure.
+              Using Excel or standard workout apps is stale and lifeless. Tracking reps in a spreadsheet makes fitness feel like admin work, not an adventure.
             </p>
           </div>
         </div>
@@ -236,7 +239,7 @@ function CaseStudy() {
                 marginBottom: '16px',
               }}
             >
-              Quest Log reframes the gym as a game world you're physically progressing through. Every workout completed is a quest cleared. Every session adds XP. Your streak is a resource you protect. The journey map — a hand-illustrated RPG world — advances as you train. You're not logging reps. You're pushing deeper into new territory.
+              Quest Log reframes the gym as a game world you're physically progressing through. Every workout completed is a quest cleared. Every session adds XP. Your streak is a resource you protect. The journey map, a hand-illustrated RPG world, advances as you train. You're not logging reps. You're pushing deeper into new territory.
             </p>
             <p
               style={{
@@ -247,7 +250,7 @@ function CaseStudy() {
                 lineHeight: 1.75,
               }}
             >
-              The aesthetic direction was deliberate. Warm illustration over dark pixel art. Chunky, rounded UI over clinical dashboards. The design borrows from games like Moonlighter and apps like Duolingo — things people open because they want to, not because they have to. The goal was to make the gym feel like somewhere your character needs to be.
+              The aesthetic direction was deliberate. Warm illustration over dark pixel art. Chunky, rounded UI over clinical dashboards. The design borrows from games like Moonlighter and apps like Duolingo, apps people open because they want to, not because they have to. The goal was to make the gym feel like somewhere your character needs to be.
             </p>
           </div>
 
@@ -284,19 +287,19 @@ function CaseStudy() {
                 marginTop: '8px',
               }}
             >
-              Warm oranges. Chunky rounded UI. Illustration over pixel art. The visual decision was intentional — approachable, not intimidating. The gym is already hard enough. The app shouldn't be.
+              Warm oranges. Chunky rounded UI. Illustration over pixel art. The visual decision was intentional: approachable, not intimidating. The gym is already hard enough. The app shouldn't be.
             </p>
           </div>
 
           {/* Screenshot carousel */}
           <ScreenshotCarousel slides={[
-            { src: '/screenshots/Quest example.jpg', caption: 'Quest Builder — Warm-Up / Main / Cool-Down' },
-            { src: '/screenshots/quest board screenshot.jpg', caption: 'Quest Board — Active quests' },
-            { src: '/screenshots/Inventory.jpg', caption: 'My Stash — Supplement inventory' },
-            { src: '/screenshots/active set 2.jpg', caption: 'Active Workout — Exercise tracking' },
-            { src: '/screenshots/active break.jpg', caption: 'Active Break — Built-in rest timer' },
-            { src: '/screenshots/Spin screenshot.jpg', caption: 'Rest Day — Spin for Swoll Coins' },
-            { src: '/screenshots/streaks.jpg', caption: 'Stats — Streak, Swoll Coins, total workouts' },
+            { src: '/screenshots/Quest example.jpg', caption: 'Quest Builder: Warm-Up, Main and Cool-Down' },
+            { src: '/screenshots/quest board screenshot.jpg', caption: 'Quest Board: active quests' },
+            { src: '/screenshots/Inventory.jpg', caption: 'My Stash: supplement inventory' },
+            { src: '/screenshots/active set 2.jpg', caption: 'Active Workout: exercise tracking' },
+            { src: '/screenshots/active break.jpg', caption: 'Active Break: built-in rest timer' },
+            { src: '/screenshots/Spin screenshot.jpg', caption: 'Rest Day: spin for Swoll Coins' },
+            { src: '/screenshots/streaks.jpg', caption: 'Stats: streak, Swoll Coins, total workouts' },
           ]} />
         </div>
       </section>
@@ -336,7 +339,7 @@ function CaseStudy() {
                   { src: '/icons/quest-weight.png', srcSet: '/icons/quest-weight.png 1x, /icons/quest-weight@2x.png 2x, /icons/quest-weight@3x.png 3x', alt: 'Weight' },
                   { src: '/icons/quest-boxing.png', srcSet: '/icons/quest-boxing.png 1x, /icons/quest-boxing@2x.png 2x, /icons/quest-boxing@3x.png 3x', alt: 'Boxing' },
                 ],
-                description: 'Build any workout from scratch across three phases — Warm-Up, Main, and Cool-Down. Saved as reusable templates, not one-time checklists. Run the same quest a hundred times or build a new one every session.',
+                description: 'Build any workout from scratch across three phases: Warm-Up, Main, and Cool-Down. Saved as reusable templates, not one-time checklists. Run the same quest a hundred times or build a new one every session.',
               },
               {
                 accent: '#65A30D',
@@ -363,7 +366,7 @@ function CaseStudy() {
                 video: null,
                 staticImage: '/icons/nav-map.png',
                 staticImageSize: 120,
-                description: 'Your progress visualised as a hand-illustrated RPG world. Each region is a new zone unlocked through consistent training. Six regions planned — Iron Field Woods, Plains of Sorrows, Emberveil Peaks, Skullpeak Glaciers, Sunken Ruins of Aldara, Stormreach Cliffs.',
+                description: 'Your progress visualised as a hand-illustrated RPG world. Each region is a new zone unlocked through consistent training. Six regions planned: Iron Field Woods, Plains of Sorrows, Emberveil Peaks, Skullpeak Glaciers, Sunken Ruins of Aldara, Stormreach Cliffs.',
               },
             ].map((card, i) => (
               <div
@@ -446,6 +449,8 @@ function CaseStudy() {
                     <span
                       style={{
                         display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: '5px',
                         background: '#FEF3C7',
                         color: '#92400E',
                         border: '1px solid #FCD34D',
@@ -461,7 +466,7 @@ function CaseStudy() {
                         src="/icons/icon-pickaxec.png"
                         srcSet="/icons/icon-pickaxec.png 1x, /icons/icon-pickaxec@2x.png 2x, /icons/icon-pickaxec@3x.png 3x"
                         alt=""
-                        style={{ width: '12px', height: '12px', objectFit: 'contain', marginRight: '5px' }}
+                        style={{ width: '12px', height: '12px', objectFit: 'contain', display: 'block' }}
                       />
                       WIP
                     </span>
@@ -490,17 +495,17 @@ function CaseStudy() {
             {
               number: '01',
               title: 'Making gamification feel earned, not gimmicky.',
-              body: 'Coins and XP only work if the underlying tracking tool is solid. The risk with gamification is that it papers over a bad product with candy. The approach here was to build the workout builder as a clean, functional tool first — then layer rewards on top. The game mechanics only feel satisfying because the core loop is actually useful.',
+              body: 'Coins and XP only work if the underlying tracking tool is solid. The risk with gamification is that it papers over a bad product with candy. The approach here was to build the workout builder as a clean, functional tool first, then layer rewards on top. The game mechanics only feel satisfying because the core loop is actually useful.',
             },
             {
               number: '02',
               title: 'Designing for one user: yourself.',
-              body: "No user research. No testing sessions. No feedback rounds. The loop is: build it, use it at the gym the next morning, adjust what broke. That's faster than any process I've run on a team — but you have to be ruthless about catching your own blind spots. The things that feel obvious to you are invisible to everyone else.",
+              body: "No user research. No testing sessions. No feedback rounds. The loop is: build it, use it at the gym the next morning, adjust what broke. That's faster than any process I've run on a team. But you have to be ruthless about catching your own blind spots. The things that feel obvious to you are invisible to everyone else.",
             },
             {
               number: '03',
               title: 'Generating illustration assets without a design system handoff.',
-              body: "Every icon, banner, and region tile is generated externally and manually integrated into the codebase. There's no Figma-to-code pipeline. Maintaining visual consistency across AI-generated assets — different sessions, different tools — requires opinionated constraints upfront: fixed aspect ratios, a strict color palette, and a reference image you don't deviate from.",
+              body: "Every icon, banner, and region tile is generated externally and manually integrated into the codebase. There's no Figma-to-code pipeline. Maintaining visual consistency across AI-generated assets from different sessions and tools requires opinionated constraints upfront: fixed aspect ratios, a strict color palette, and a reference image you don't deviate from.",
             },
           ].map((challenge, i) => (
             <div
@@ -586,7 +591,7 @@ function CaseStudy() {
                 marginBottom: '16px',
               }}
             >
-              Every quest completed earns Swoll Coins — and Swoll Coins have a purpose beyond the scoreboard. One of the planned uses is your Dungeon Gym: a personal training space inside the game world that starts bare and gets upgraded as you invest in it.
+              Every quest completed earns Swoll Coins, and they have a purpose beyond the scoreboard. One of the planned uses is your Dungeon Gym: a personal training space inside the game world that starts bare and gets upgraded as you invest in it.
             </p>
             <p
               style={{
@@ -597,7 +602,7 @@ function CaseStudy() {
                 lineHeight: 1.75,
               }}
             >
-              Spend coins to add equipment, unlock new zones, and customise the aesthetic of your gym. The screenshot shows a before and after — same space, different investment. The goal is to make progress feel tangible beyond rep counts and streak numbers.
+              Spend coins to add equipment, unlock new zones, and customise the aesthetic of your gym. The screenshot shows a before and after. Same space, different investment. The goal is to make progress feel tangible beyond rep counts and streak numbers.
             </p>
             <div
               style={{
@@ -680,11 +685,11 @@ function CaseStudy() {
               </p>
               {[
                 'Quest builder with Warm-Up / Main / Cool-Down',
-                'Supplement inventory (My Stash) — stock levels tracked as Stocked, Low, and Out; supports external URLs for quick re-ordering (e.g. Amazon)',
-                'Swoll Coins reward system — earn coins on quest completion with an animated coin sequence',
-                'Built-in timer for prep time, breaks, and isometric holds — with audio cues',
-                'Rest day rewards — slot machine mechanics to spin for Swoll Coins on off days, preserving streaks',
-                'Active workout tab — displays the currently running workout in real time',
+                'Supplement inventory (My Stash): stock levels tracked as Stocked, Low, and Out, with external URLs for quick re-ordering (e.g. Amazon)',
+                'Swoll Coins reward system: earn coins on quest completion with an animated coin sequence',
+                'Built-in timer for prep time, breaks, and isometric holds with audio cues',
+                'Rest day rewards: slot machine mechanics to spin for Swoll Coins on off days, preserving streaks',
+                'Active workout tab that displays the currently running workout in real time',
                 'Exercise order reshuffling and in-quest editing',
               ].map((item, i) => (
                 <p
@@ -719,13 +724,13 @@ function CaseStudy() {
                 On the Horizon
               </p>
               {[
-                'Journey map — first region live',
+                'Journey map: first region live',
                 'Cloud sync via Google Sign-In + Firestore',
                 'Hero character progression + avatar',
                 'Micro-animations and polish pass',
                 'All six journey map regions fully built',
-                'Regional shops — spend Swoll Coins on outfits and gear',
-                'Dungeon Gym — buy and upgrade your personal training space using Swoll Coins',
+                'Regional shops: spend Swoll Coins on outfits and gear',
+                'Dungeon Gym: buy and upgrade your personal training space using Swoll Coins',
               ].map((item, i) => (
                 <p
                   key={i}
