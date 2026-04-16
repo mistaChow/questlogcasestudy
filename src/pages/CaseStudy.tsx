@@ -208,8 +208,8 @@ function CaseStudy() {
           </div>
           <div>
             <img
-              src="/screenshots/excel.jpg"
-              alt="Spreadsheet workout tracking"
+              src="/screenshots/homescreen.png"
+              alt="Quest Log home screen"
               style={{ width: '100%', height: 'auto', borderRadius: '16px', display: 'block', boxShadow: '0 4px 20px rgba(0,0,0,0.08)' }}
             />
             <p style={{
@@ -302,7 +302,6 @@ function CaseStudy() {
             { src: '/screenshots/active set 2.jpg', caption: 'Active Workout: exercise tracking' },
             { src: '/screenshots/active break.jpg', caption: 'Active Break: built-in rest timer' },
             { src: '/screenshots/Spin screenshot.jpg', caption: 'Rest Day: spin for Swoll Coins' },
-            { src: '/screenshots/streaks.jpg', caption: 'Stats: streak, Swoll Coins, total workouts' },
           ]} />
         </div>
       </section>
