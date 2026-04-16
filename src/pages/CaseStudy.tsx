@@ -773,6 +773,68 @@ function CaseStudy() {
         </div>
       </section>
 
+      {/* CONCEPT ART SECTION */}
+      <section style={{ background: '#FFFBF5', padding: '80px 24px' }}>
+        <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
+          <SectionHeader label="CONCEPT ART" heading="The journey map is coming." />
+          <p
+            style={{
+              fontFamily: 'Inter, sans-serif',
+              fontWeight: 500,
+              color: '#57534E',
+              fontSize: '1rem',
+              lineHeight: 1.75,
+              marginTop: '24px',
+              maxWidth: '600px',
+            }}
+          >
+            Each region of the journey map represents a new zone unlocked through consistent training. These are early concept pieces exploring the visual direction for regions still in development. The goal is a world that feels alive and worth pushing into.
+          </p>
+
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: '1fr 1fr',
+              gap: '16px',
+              marginTop: '48px',
+            }}
+            className="concept-grid"
+          >
+            {[
+              { src: '/journeymap/aquasword_region.png', caption: 'Aquasword Region' },
+              { src: '/journeymap/field of bones region.png', caption: 'Field of Bones' },
+              { src: '/journeymap/flowerfield regions.png', caption: 'Flowerfield' },
+              { src: '/journeymap/haunted marshes region.png', caption: 'Haunted Marshes' },
+              { src: '/journeymap/volcano region.png', caption: 'Volcano Region' },
+            ].map((item, i) => (
+              <div key={i} style={{ position: 'relative', borderRadius: '16px', overflow: 'hidden' }}>
+                <img
+                  src={item.src}
+                  alt={item.caption}
+                  style={{ width: '100%', height: 'auto', display: 'block' }}
+                />
+                <div style={{
+                  position: 'absolute',
+                  bottom: 0,
+                  left: 0,
+                  right: 0,
+                  padding: '28px 16px 14px',
+                  background: 'linear-gradient(to top, rgba(28,16,9,0.75) 0%, transparent 100%)',
+                }}>
+                  <p style={{
+                    fontFamily: 'Outfit, sans-serif',
+                    fontWeight: 600,
+                    color: 'white',
+                    fontSize: '0.85rem',
+                    margin: 0,
+                  }}>{item.caption}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* FOOTER */}
       <footer
         style={{
@@ -908,6 +970,9 @@ function CaseStudy() {
           .roadmap-grid {
             grid-template-columns: 1fr 1fr !important;
           }
+          .concept-grid > div:last-child:nth-child(odd) {
+            grid-column: 1 / -1;
+          }
           .dungeon-grid {
             grid-template-columns: 1fr 1fr !important;
           }
@@ -915,6 +980,9 @@ function CaseStudy() {
         @media (max-width: 767px) {
           section[style] {
             padding: 60px 20px;
+          }
+          .concept-grid {
+            grid-template-columns: 1fr !important;
           }
           .hero-overlay {
             position: static !important;
