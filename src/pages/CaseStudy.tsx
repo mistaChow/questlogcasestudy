@@ -197,7 +197,7 @@ function CaseStudy() {
           <img
             src="/screenshots/active set.jpg"
             alt="Quest Log — Active workout tracking"
-            style={{ width: '100%', height: 'auto', borderRadius: '16px', display: 'block' }}
+            style={{ width: '100%', maxWidth: '280px', height: 'auto', borderRadius: '16px', display: 'block', margin: '0 auto' }}
           />
         </div>
 
