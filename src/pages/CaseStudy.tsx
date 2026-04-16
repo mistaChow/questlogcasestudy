@@ -330,7 +330,7 @@ function CaseStudy() {
               },
               {
                 accent: '#EAB308',
-                icon: '🪙',
+                icon: '',
                 title: 'Gold Coins & Rewards',
                 wip: true,
                 video: '/videos/treasure.mp4',
@@ -350,7 +350,7 @@ function CaseStudy() {
                 key={i}
                 className="feature-card"
                 style={{
-                  background: '#FFFBF5',
+                  background: 'white',
                   border: '1px solid #E7E5E4',
                   borderTop: `4px solid ${card.accent}`,
                   borderRadius: '16px',
@@ -369,8 +369,9 @@ function CaseStudy() {
                     poster={'videoPoster' in card ? card.videoPoster : undefined}
                     style={{
                       display: 'block',
-                      width: '100%',
+                      width: '50%',
                       height: 'auto',
+                      margin: '0 auto',
                     }}
                   >
                     <source src={card.video} type="video/mp4" />
@@ -381,9 +382,11 @@ function CaseStudy() {
                 )}
 
                 <div style={{ padding: '28px' }}>
-                  <span style={{ fontSize: '2.2rem', display: 'block', marginBottom: '14px' }}>
-                    {card.icon}
-                  </span>
+                  {card.icon && (
+                    <span style={{ fontSize: '2.2rem', display: 'block', marginBottom: '14px' }}>
+                      {card.icon}
+                    </span>
+                  )}
                   <p
                     style={{
                       fontFamily: 'Outfit, sans-serif',
