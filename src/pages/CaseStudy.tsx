@@ -194,11 +194,25 @@ function CaseStudy() {
               The problem isn't motivation. It's that the experience of tracking has no texture to it. Nothing makes it feel like progress. Nothing makes you feel like the kind of person who shows up. It's admin. And admin is easy to skip.
             </p>
           </div>
-          <img
-            src="/screenshots/active set.jpg"
-            alt="Quest Log — Active workout tracking"
-            style={{ width: '100%', maxWidth: '280px', height: 'auto', borderRadius: '16px', display: 'block', margin: '0 auto' }}
-          />
+          <div>
+            <img
+              src="/screenshots/excel.jpg"
+              alt="Spreadsheet workout tracking"
+              style={{ width: '100%', height: 'auto', borderRadius: '16px', display: 'block', boxShadow: '0 4px 20px rgba(0,0,0,0.08)' }}
+            />
+            <p style={{
+              fontFamily: 'Inter, sans-serif',
+              fontWeight: 400,
+              fontStyle: 'italic',
+              color: '#78716C',
+              fontSize: '0.82rem',
+              marginTop: '10px',
+              marginBottom: 0,
+              lineHeight: 1.6,
+            }}>
+              Using Excel or standard workout apps is stale and lifeless — tracking reps in a spreadsheet makes fitness feel like admin work, not an adventure.
+            </p>
+          </div>
         </div>
 
         {/* SOLUTION BLOCK */}
