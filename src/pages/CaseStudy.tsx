@@ -32,6 +32,7 @@ function CaseStudy() {
 
         {/* Fade into page background at the bottom */}
         <div
+          className="hero-fade"
           style={{
             position: 'absolute',
             bottom: 0,
@@ -45,6 +46,7 @@ function CaseStudy() {
 
         {/* CTA + Badges + scroll indicator */}
         <div
+          className="hero-overlay"
           style={{
             position: 'absolute',
             bottom: '32px',
@@ -81,6 +83,7 @@ function CaseStudy() {
 
           {/* Badges */}
           <div
+            className="hero-badges"
             style={{
               display: 'flex',
               gap: '8px',
@@ -912,6 +915,19 @@ function CaseStudy() {
         @media (max-width: 767px) {
           section[style] {
             padding: 60px 20px;
+          }
+          .hero-overlay {
+            position: static !important;
+            background: #FFFBF5;
+            padding: 20px 16px 4px;
+            margin-bottom: -24px;
+          }
+          .hero-fade {
+            display: none;
+          }
+          .hero-badges {
+            flex-direction: column !important;
+            align-items: center !important;
           }
         }
         .btn-primary:hover {
