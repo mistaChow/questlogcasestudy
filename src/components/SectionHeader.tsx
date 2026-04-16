@@ -9,8 +9,8 @@ function SectionHeader({ label, heading, centered = false }: SectionHeaderProps)
     <div style={{ textAlign: centered ? 'center' : 'left' }}>
       <p
         style={{
-          fontFamily: 'Lato, sans-serif',
-          fontWeight: 700,
+          fontFamily: 'Outfit, sans-serif',
+          fontWeight: 600,
           color: '#F97316',
           fontSize: '0.7rem',
           letterSpacing: '0.1em',
@@ -22,8 +22,8 @@ function SectionHeader({ label, heading, centered = false }: SectionHeaderProps)
       </p>
       <h2
         style={{
-          fontFamily: 'Nunito, sans-serif',
-          fontWeight: 800,
+          fontFamily: 'Outfit, sans-serif',
+          fontWeight: 700,
           color: '#1C1009',
           fontSize: 'clamp(1.8rem, 4vw, 2.8rem)',
           lineHeight: 1.2,

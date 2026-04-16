@@ -42,7 +42,7 @@ function CaseStudy() {
           }}
         />
 
-        {/* Badges + scroll indicator */}
+        {/* CTA + Badges + scroll indicator */}
         <div
           style={{
             position: 'absolute',
@@ -66,8 +66,8 @@ function CaseStudy() {
               border: 'none',
               borderRadius: '12px',
               padding: '14px 28px',
-              fontFamily: 'Nunito, sans-serif',
-              fontWeight: 700,
+              fontFamily: 'Outfit, sans-serif',
+              fontWeight: 600,
               fontSize: '0.95rem',
               boxShadow: '0 4px 0 0 #C2410C',
               textDecoration: 'none',
@@ -92,7 +92,7 @@ function CaseStudy() {
                 background: '#FEF3C7',
                 color: '#92400E',
                 border: '1px solid #FCD34D',
-                fontFamily: 'Lato, sans-serif',
+                fontFamily: 'Outfit, sans-serif',
                 fontWeight: 600,
                 fontSize: '0.78rem',
                 borderRadius: '9999px',
@@ -106,7 +106,7 @@ function CaseStudy() {
                 background: 'rgba(245,245,244,0.92)',
                 color: '#78716C',
                 border: '1px solid #E7E5E4',
-                fontFamily: 'Lato, sans-serif',
+                fontFamily: 'Outfit, sans-serif',
                 fontWeight: 600,
                 fontSize: '0.78rem',
                 borderRadius: '9999px',
@@ -136,8 +136,8 @@ function CaseStudy() {
             </span>
             <span
               style={{
-                fontFamily: 'Lato, sans-serif',
-                fontWeight: 300,
+                fontFamily: 'Outfit, sans-serif',
+                fontWeight: 400,
                 fontSize: '0.7rem',
                 color: '#F97316',
               }}
@@ -171,8 +171,8 @@ function CaseStudy() {
           <div style={{ maxWidth: '540px' }}>
             <p
               style={{
-                fontFamily: 'Lato, sans-serif',
-                fontWeight: 400,
+                fontFamily: 'Inter, sans-serif',
+                fontWeight: 500,
                 color: '#57534E',
                 fontSize: '1rem',
                 lineHeight: 1.75,
@@ -183,8 +183,8 @@ function CaseStudy() {
             </p>
             <p
               style={{
-                fontFamily: 'Lato, sans-serif',
-                fontWeight: 400,
+                fontFamily: 'Inter, sans-serif',
+                fontWeight: 500,
                 color: '#57534E',
                 fontSize: '1rem',
                 lineHeight: 1.75,
@@ -203,8 +203,8 @@ function CaseStudy() {
           <div style={{ marginTop: '48px' }}>
             <p
               style={{
-                fontFamily: 'Lato, sans-serif',
-                fontWeight: 400,
+                fontFamily: 'Inter, sans-serif',
+                fontWeight: 500,
                 color: '#57534E',
                 fontSize: '1rem',
                 lineHeight: 1.75,
@@ -215,8 +215,8 @@ function CaseStudy() {
             </p>
             <p
               style={{
-                fontFamily: 'Lato, sans-serif',
-                fontWeight: 400,
+                fontFamily: 'Inter, sans-serif',
+                fontWeight: 500,
                 color: '#57534E',
                 fontSize: '1rem',
                 lineHeight: 1.75,
@@ -239,8 +239,8 @@ function CaseStudy() {
           >
             <p
               style={{
-                fontFamily: 'Nunito, sans-serif',
-                fontWeight: 700,
+                fontFamily: 'Inter, sans-serif',
+                fontWeight: 600,
                 color: '#1C1009',
                 fontSize: '0.95rem',
                 margin: 0,
@@ -250,7 +250,7 @@ function CaseStudy() {
             </p>
             <p
               style={{
-                fontFamily: 'Lato, sans-serif',
+                fontFamily: 'Inter, sans-serif',
                 fontWeight: 400,
                 fontStyle: 'italic',
                 color: '#78716C',
@@ -359,7 +359,7 @@ function CaseStudy() {
                 </span>
                 <p
                   style={{
-                    fontFamily: 'Nunito, sans-serif',
+                    fontFamily: 'Outfit, sans-serif',
                     fontWeight: 700,
                     color: '#1C1009',
                     fontSize: '1.05rem',
@@ -370,8 +370,8 @@ function CaseStudy() {
                 </p>
                 <p
                   style={{
-                    fontFamily: 'Lato, sans-serif',
-                    fontWeight: 400,
+                    fontFamily: 'Inter, sans-serif',
+                    fontWeight: 500,
                     color: '#78716C',
                     fontSize: '0.88rem',
                     lineHeight: 1.65,
@@ -389,8 +389,8 @@ function CaseStudy() {
                       border: '1px solid #FCD34D',
                       borderRadius: '9999px',
                       padding: '3px 10px',
-                      fontFamily: 'Lato, sans-serif',
-                      fontWeight: 700,
+                      fontFamily: 'Outfit, sans-serif',
+                      fontWeight: 600,
                       fontSize: '0.7rem',
                       marginTop: '12px',
                     }}
@@ -446,8 +446,8 @@ function CaseStudy() {
             >
               <p
                 style={{
-                  fontFamily: 'Lato, sans-serif',
-                  fontWeight: 700,
+                  fontFamily: 'Outfit, sans-serif',
+                  fontWeight: 600,
                   color: '#F97316',
                   fontSize: '0.7rem',
                   letterSpacing: '0.1em',
@@ -459,7 +459,7 @@ function CaseStudy() {
               </p>
               <p
                 style={{
-                  fontFamily: 'Nunito, sans-serif',
+                  fontFamily: 'Outfit, sans-serif',
                   fontWeight: 700,
                   color: '#1C1009',
                   fontSize: '1.05rem',
@@ -470,8 +470,8 @@ function CaseStudy() {
               </p>
               <p
                 style={{
-                  fontFamily: 'Lato, sans-serif',
-                  fontWeight: 400,
+                  fontFamily: 'Inter, sans-serif',
+                  fontWeight: 500,
                   color: '#78716C',
                   fontSize: '0.9rem',
                   lineHeight: 1.75,
@@ -497,8 +497,8 @@ function CaseStudy() {
 
           <p
             style={{
-              fontFamily: 'Lato, sans-serif',
-              fontWeight: 400,
+              fontFamily: 'Inter, sans-serif',
+              fontWeight: 500,
               color: '#57534E',
               fontSize: '1rem',
               lineHeight: 1.75,
@@ -522,8 +522,8 @@ function CaseStudy() {
             <div>
               <p
                 style={{
-                  fontFamily: 'Nunito, sans-serif',
-                  fontWeight: 700,
+                  fontFamily: 'Inter, sans-serif',
+                  fontWeight: 600,
                   color: '#1C1009',
                   fontSize: '1rem',
                   marginBottom: '16px',
@@ -541,8 +541,8 @@ function CaseStudy() {
                 <p
                   key={i}
                   style={{
-                    fontFamily: 'Lato, sans-serif',
-                    fontWeight: 400,
+                    fontFamily: 'Inter, sans-serif',
+                    fontWeight: 500,
                     color: '#57534E',
                     fontSize: '0.9rem',
                     lineHeight: 1.8,
@@ -560,8 +560,8 @@ function CaseStudy() {
             <div>
               <p
                 style={{
-                  fontFamily: 'Nunito, sans-serif',
-                  fontWeight: 700,
+                  fontFamily: 'Inter, sans-serif',
+                  fontWeight: 600,
                   color: '#A8A29E',
                   fontSize: '1rem',
                   marginBottom: '16px',
@@ -578,8 +578,8 @@ function CaseStudy() {
                 <p
                   key={i}
                   style={{
-                    fontFamily: 'Lato, sans-serif',
-                    fontWeight: 400,
+                    fontFamily: 'Inter, sans-serif',
+                    fontWeight: 500,
                     color: '#A8A29E',
                     fontSize: '0.9rem',
                     lineHeight: 1.8,
@@ -598,8 +598,8 @@ function CaseStudy() {
             style={{
               marginTop: '48px',
               textAlign: 'center',
-              fontFamily: 'Lato, sans-serif',
-              fontWeight: 300,
+              fontFamily: 'Inter, sans-serif',
+              fontWeight: 400,
               fontStyle: 'italic',
               color: '#A8A29E',
               fontSize: '0.9rem',
@@ -634,8 +634,8 @@ function CaseStudy() {
         />
         <p
           style={{
-            fontFamily: 'Lato, sans-serif',
-            fontWeight: 300,
+            fontFamily: 'Inter, sans-serif',
+            fontWeight: 400,
             color: '#A8A29E',
             fontSize: '0.82rem',
             marginTop: '8px',
@@ -661,8 +661,8 @@ function CaseStudy() {
               border: 'none',
               borderRadius: '12px',
               padding: '14px 28px',
-              fontFamily: 'Nunito, sans-serif',
-              fontWeight: 700,
+              fontFamily: 'Outfit, sans-serif',
+              fontWeight: 600,
               fontSize: '0.95rem',
               boxShadow: '0 4px 0 0 #C2410C',
               textDecoration: 'none',
@@ -681,8 +681,8 @@ function CaseStudy() {
               border: '2px solid #F97316',
               borderRadius: '12px',
               padding: '14px 28px',
-              fontFamily: 'Nunito, sans-serif',
-              fontWeight: 700,
+              fontFamily: 'Outfit, sans-serif',
+              fontWeight: 600,
               fontSize: '0.95rem',
               textDecoration: 'none',
               display: 'inline-block',

@@ -22,8 +22,8 @@ function ImagePlaceholder({ caption, aspectRatio = '4/5', className = '' }: Imag
         <span style={{ fontSize: '2rem' }}>📷</span>
         <span
           style={{
-            fontFamily: 'Lato, sans-serif',
-            fontWeight: 300,
+            fontFamily: 'Inter, sans-serif',
+            fontWeight: 400,
             color: '#A8A29E',
             fontSize: '0.8rem',
             marginTop: '8px',
@@ -35,8 +35,8 @@ function ImagePlaceholder({ caption, aspectRatio = '4/5', className = '' }: Imag
       {caption && (
         <p
           style={{
-            fontFamily: 'Lato, sans-serif',
-            fontWeight: 300,
+            fontFamily: 'Inter, sans-serif',
+            fontWeight: 400,
             fontStyle: 'italic',
             color: '#A8A29E',
             fontSize: '0.75rem',
