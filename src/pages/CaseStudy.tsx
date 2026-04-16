@@ -1,5 +1,6 @@
 import SectionHeader from '../components/SectionHeader'
 import ImagePlaceholder from '../components/ImagePlaceholder'
+import CyclingIcon from '../components/CyclingIcon'
 
 function CaseStudy() {
   return (
@@ -314,10 +315,15 @@ function CaseStudy() {
             {[
               {
                 accent: '#F97316',
-                icon: '⚔️',
+                icon: '',
                 title: 'Custom Quest Builder',
                 wip: false,
                 video: null,
+                iconCycle: [
+                  { src: '/icons/quest-sword.png', srcSet: '/icons/quest-sword.png 1x, /icons/quest-sword@2x.png 2x, /icons/quest-sword@3x.png 3x', alt: 'Sword' },
+                  { src: '/icons/quest-shield.png', srcSet: '/icons/quest-shield.png 1x, /icons/quest-shield@2x.png 2x, /icons/quest-shield@3x.png 3x', alt: 'Shield' },
+                  { src: '/icons/quest-bow.png', srcSet: '/icons/quest-bow.png 1x, /icons/quest-bow@2x.png 2x, /icons/quest-bow@3x.png 3x', alt: 'Bow' },
+                ],
                 description: 'Build any workout from scratch across three phases — Warm-Up, Main, and Cool-Down. Saved as reusable templates, not one-time checklists. Run the same quest a hundred times or build a new one every session.',
               },
               {
@@ -379,6 +385,12 @@ function CaseStudy() {
                       <img src={card.videoPoster} alt={card.title} style={{ width: '100%', height: 'auto', display: 'block' }} />
                     )}
                   </video>
+                )}
+
+                {'iconCycle' in card && card.iconCycle && (
+                  <div style={{ padding: '28px 28px 0', display: 'flex', justifyContent: 'center' }}>
+                    <CyclingIcon images={card.iconCycle} interval={1000} size={120} />
+                  </div>
                 )}
 
                 <div style={{ padding: '28px' }}>
@@ -726,6 +738,10 @@ function CaseStudy() {
       </footer>
 
       <style>{`
+        @keyframes iconFadeIn {
+          from { opacity: 0; transform: scale(0.88); }
+          to   { opacity: 1; transform: scale(1); }
+        }
         @keyframes bounce {
           0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
           40% { transform: translateY(-8px); }
