@@ -591,7 +591,6 @@ function CaseStudy() {
                 'Supplement inventory (My Stash)',
                 'Gold coin reward system + animated coin sequence',
                 'Rest day slot machine',
-                'Journey map — first region live',
               ].map((item, i) => (
                 <p
                   key={i}
@@ -625,10 +624,12 @@ function CaseStudy() {
                 On the Horizon
               </p>
               {[
+                'Journey map — first region live',
                 'Cloud sync via Google Sign-In + Firestore',
                 'Hero character progression + avatar',
                 'Micro-animations and polish pass',
                 'All six journey map regions fully built',
+                'Regional shops — spend gold coins on outfits and build your own dungeon gym',
               ].map((item, i) => (
                 <p
                   key={i}
