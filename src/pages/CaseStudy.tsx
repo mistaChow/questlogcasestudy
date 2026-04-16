@@ -388,7 +388,7 @@ function CaseStudy() {
                         muted
                         playsInline
                         poster={'videoPoster' in card ? card.videoPoster as string : undefined}
-                        style={{ maxHeight: '100%', maxWidth: '80%', width: 'auto', display: 'block' }}
+                        style={{ maxHeight: '100%', maxWidth: '80%', width: 'auto', display: 'block', borderRadius: '12px' }}
                       >
                         <source src={card.video} type="video/mp4" />
                       </video>
