@@ -334,9 +334,7 @@ function CaseStudy() {
                 icon: '',
                 title: 'My Stash',
                 wip: false,
-                video: null,
-                staticImage: '/icons/stash-backpack.png',
-                staticImageSize: 160,
+                video: '/videos/potions.mp4',
                 description: 'Track your supplements like an in-game inventory. Visual stock levels, custom icons, and a quick daily log. Running low shows visually before you run out. Your pre-workout is basically a health potion.',
               },
               {
@@ -435,6 +433,7 @@ function CaseStudy() {
                       fontSize: '0.88rem',
                       lineHeight: 1.65,
                       marginTop: '8px',
+                      marginBottom: 0,
                     }}
                   >
                     {card.description}
