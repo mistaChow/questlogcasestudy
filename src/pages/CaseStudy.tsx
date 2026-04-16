@@ -56,6 +56,29 @@ function CaseStudy() {
             zIndex: 2,
           }}
         >
+          {/* View Live App CTA */}
+          <a
+            href="https://quest-log-case-study.vercel.app"
+            className="btn-primary"
+            style={{
+              background: '#F97316',
+              color: 'white',
+              border: 'none',
+              borderRadius: '12px',
+              padding: '14px 28px',
+              fontFamily: 'Nunito, sans-serif',
+              fontWeight: 700,
+              fontSize: '0.95rem',
+              boxShadow: '0 4px 0 0 #C2410C',
+              textDecoration: 'none',
+              display: 'inline-block',
+              transition: 'transform 0.1s ease, box-shadow 0.1s ease',
+            }}
+          >
+            View Live App →
+          </a>
+
+          {/* Badges */}
           <div
             style={{
               display: 'flex',
@@ -598,18 +621,17 @@ function CaseStudy() {
           textAlign: 'center',
         }}
       >
-        <p
+        <img
+          src="/logo/logo_horz.png"
+          srcSet="/logo/logo_horz.png 1x, /logo/logo_horz@2x.png 2x, /logo/logo_horz@3x.png 3x"
+          alt="Quest Log"
           style={{
-            fontFamily: "'Cinzel Decorative', serif",
-            fontWeight: 700,
-            color: '#F97316',
-            fontSize: '1.6rem',
-            letterSpacing: '0.05em',
-            margin: 0,
+            height: '48px',
+            width: 'auto',
+            display: 'block',
+            margin: '0 auto',
           }}
-        >
-          QUEST LOG
-        </p>
+        />
         <p
           style={{
             fontFamily: 'Lato, sans-serif',
