@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 
 interface Slide {
   src: string
@@ -11,16 +11,27 @@ interface ScreenshotCarouselProps {
 
 function ScreenshotCarousel({ slides }: ScreenshotCarouselProps) {
   const [current, setCurrent] = useState(0)
+  const [fading, setFading] = useState(false)
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
 
-  const prev = () => setCurrent(i => (i - 1 + slides.length) % slides.length)
-  const next = () => setCurrent(i => (i + 1) % slides.length)
+  const goTo = (index: number) => {
+    if (fading || index === current) return
+    if (timerRef.current) clearTimeout(timerRef.current)
+    setFading(true)
+    timerRef.current = setTimeout(() => {
+      setCurrent(index)
+      setFading(false)
+    }, 180)
+  }
+
+  const prev = () => goTo((current - 1 + slides.length) % slides.length)
+  const next = () => goTo((current + 1) % slides.length)
 
   return (
     <div style={{ marginTop: '48px' }}>
       {/* Image area */}
-      <div style={{ position: 'relative' }}>
+      <div style={{ position: 'relative', padding: '0 52px' }}>
         <img
-          key={current}
           src={slides[current].src}
           alt={slides[current].caption}
           style={{
@@ -31,7 +42,8 @@ function ScreenshotCarousel({ slides }: ScreenshotCarouselProps) {
             margin: '0 auto',
             borderRadius: '20px',
             boxShadow: '0 8px 32px rgba(0,0,0,0.12)',
-            animation: 'slideIn 0.25s ease',
+            opacity: fading ? 0 : 1,
+            transition: 'opacity 0.18s ease',
           }}
         />
 
@@ -100,7 +112,9 @@ function ScreenshotCarousel({ slides }: ScreenshotCarouselProps) {
         textAlign: 'center',
         marginTop: '16px',
         marginBottom: 0,
-        minHeight: '1.2em',
+        minHeight: '1.4em',
+        opacity: fading ? 0 : 1,
+        transition: 'opacity 0.18s ease',
       }}>
         {slides[current].caption}
       </p>
@@ -115,7 +129,7 @@ function ScreenshotCarousel({ slides }: ScreenshotCarouselProps) {
         {slides.map((_, i) => (
           <button
             key={i}
-            onClick={() => setCurrent(i)}
+            onClick={() => goTo(i)}
             aria-label={`Go to slide ${i + 1}`}
             style={{
               width: i === current ? '20px' : '8px',

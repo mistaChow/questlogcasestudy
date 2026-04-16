@@ -529,10 +529,86 @@ function CaseStudy() {
         </div>
       </section>
 
-      {/* WHAT'S NEXT SECTION */}
+      {/* DUNGEON GYM SECTION */}
       <section
         style={{
           background: '#FEF9EE',
+          padding: '80px 24px',
+        }}
+      >
+        <div
+          style={{
+            maxWidth: '1100px',
+            margin: '0 auto',
+            display: 'grid',
+            gridTemplateColumns: '1fr',
+            gap: '48px',
+            alignItems: 'center',
+          }}
+          className="dungeon-grid"
+        >
+          <div>
+            <SectionHeader label="SWOLL COINS" heading="Spend your earnings. Build your dungeon." />
+            <p
+              style={{
+                fontFamily: 'Inter, sans-serif',
+                fontWeight: 500,
+                color: '#57534E',
+                fontSize: '1rem',
+                lineHeight: 1.75,
+                marginTop: '24px',
+                marginBottom: '16px',
+              }}
+            >
+              Every quest completed earns Swoll Coins — and Swoll Coins have a purpose beyond the scoreboard. One of the planned uses is your Dungeon Gym: a personal training space inside the game world that starts bare and gets upgraded as you invest in it.
+            </p>
+            <p
+              style={{
+                fontFamily: 'Inter, sans-serif',
+                fontWeight: 500,
+                color: '#57534E',
+                fontSize: '1rem',
+                lineHeight: 1.75,
+              }}
+            >
+              Spend coins to add equipment, unlock new zones, and customise the aesthetic of your gym. The screenshot shows a before and after — same space, different investment. The goal is to make progress feel tangible beyond rep counts and streak numbers.
+            </p>
+            <div
+              style={{
+                marginTop: '24px',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '8px',
+                background: '#FEF3C7',
+                border: '1px solid #FCD34D',
+                borderRadius: '9999px',
+                padding: '6px 14px',
+              }}
+            >
+              <span style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 600, fontSize: '0.8rem', color: '#92400E' }}>
+                🪙 Swoll Coins · Planned Feature
+              </span>
+            </div>
+          </div>
+
+          <img
+            src="/screenshots/dungeongym.png"
+            alt="Dungeon Gym — before and after upgrade"
+            style={{
+              width: '100%',
+              height: 'auto',
+              borderRadius: '20px',
+              boxShadow: '0 8px 32px rgba(0,0,0,0.1)',
+              display: 'block',
+            }}
+          />
+        </div>
+      </section>
+
+      {/* WHAT'S NEXT SECTION */}
+      <section
+        style={{
+          background: '#FFFBF5',
           padding: '80px 24px',
         }}
       >
@@ -743,10 +819,6 @@ function CaseStudy() {
       </footer>
 
       <style>{`
-        @keyframes slideIn {
-          from { opacity: 0; transform: translateX(12px); }
-          to   { opacity: 1; transform: translateX(0); }
-        }
         @keyframes iconFadeIn {
           from { opacity: 0; transform: scale(0.88); }
           to   { opacity: 1; transform: scale(1); }
@@ -786,6 +858,9 @@ function CaseStudy() {
             border-left: 1px solid #F5F5F4;
           }
           .roadmap-grid {
+            grid-template-columns: 1fr 1fr !important;
+          }
+          .dungeon-grid {
             grid-template-columns: 1fr 1fr !important;
           }
         }
