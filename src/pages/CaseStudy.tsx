@@ -370,38 +370,40 @@ function CaseStudy() {
                   transition: 'transform 0.15s ease, box-shadow 0.15s ease',
                 }}
               >
-                {/* Media area — fixed height so all cards stay equal */}
-                <div style={{
-                  height: '220px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  overflow: 'hidden',
-                  background: 'white',
-                }}>
-                  {card.video ? (
-                    <video
-                      autoPlay
-                      loop
-                      muted
-                      playsInline
-                      poster={'videoPoster' in card ? card.videoPoster as string : undefined}
-                      style={{ maxHeight: '100%', maxWidth: '80%', width: 'auto', display: 'block' }}
-                    >
-                      <source src={card.video} type="video/mp4" />
-                    </video>
-                  ) : 'iconCycle' in card && card.iconCycle ? (
-                    <CyclingIcon images={card.iconCycle} interval={2000} size={140} />
-                  ) : 'staticImage' in card && card.staticImage ? (
-                    <img
-                      src={card.staticImage as string}
-                      alt=""
-                      style={{ maxHeight: '100%', maxWidth: '80%', objectFit: 'contain', display: 'block' }}
-                    />
-                  ) : null}
-                </div>
+                <div className="card-inner" style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
+                  {/* Media area */}
+                  <div className="card-media" style={{
+                    minHeight: '220px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    overflow: 'hidden',
+                    flexShrink: 0,
+                    background: 'white',
+                  }}>
+                    {card.video ? (
+                      <video
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        poster={'videoPoster' in card ? card.videoPoster as string : undefined}
+                        style={{ maxHeight: '100%', maxWidth: '80%', width: 'auto', display: 'block' }}
+                      >
+                        <source src={card.video} type="video/mp4" />
+                      </video>
+                    ) : 'iconCycle' in card && card.iconCycle ? (
+                      <CyclingIcon images={card.iconCycle} interval={2000} size={140} />
+                    ) : 'staticImage' in card && card.staticImage ? (
+                      <img
+                        src={card.staticImage as string}
+                        alt=""
+                        style={{ maxHeight: '100%', maxWidth: '80%', objectFit: 'contain', display: 'block' }}
+                      />
+                    ) : null}
+                  </div>
 
-                <div style={{ padding: '28px' }}>
+                  <div className="card-content" style={{ padding: '28px', flex: 1 }}>
                   {card.icon && (
                     <span style={{ fontSize: '2.2rem', display: 'block', marginBottom: '14px' }}>
                       {card.icon}
@@ -449,6 +451,7 @@ function CaseStudy() {
                       ✦ WIP
                     </span>
                   )}
+                  </div>
                 </div>
               </div>
             ))}
@@ -773,6 +776,17 @@ function CaseStudy() {
           }
           .features-grid {
             grid-template-columns: 1fr 1fr !important;
+          }
+          .card-inner {
+            flex-direction: row !important;
+          }
+          .card-media {
+            width: 45%;
+            min-height: unset !important;
+            align-self: stretch;
+          }
+          .card-content {
+            border-left: 1px solid #F5F5F4;
           }
           .roadmap-grid {
             grid-template-columns: 1fr 1fr !important;
