@@ -39,7 +39,7 @@ function MusicPlayer() {
 
   return (
     <>
-      <audio ref={audioRef} src="/music.mp3" loop />
+      <audio ref={audioRef} src="/music/Quest Log Theme.mp3" loop />
 
       <div
         style={{
