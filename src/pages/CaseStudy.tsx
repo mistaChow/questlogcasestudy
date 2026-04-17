@@ -369,9 +369,7 @@ function CaseStudy() {
                 icon: '',
                 title: 'Journey Map',
                 wip: true,
-                video: null,
-                staticImage: '/icons/nav-map.png',
-                staticImageSize: 120,
+                video: '/videos/Regionpreviews.mp4',
                 description: 'Your progress visualised as a hand-illustrated RPG world. Each region is a new zone unlocked through consistent training. Six regions planned: Iron Field Woods, Plains of Sorrows, Emberveil Peaks, Skullpeak Glaciers, Sunken Ruins of Aldara, Stormreach Cliffs.',
               },
             ].map((card, i) => (
