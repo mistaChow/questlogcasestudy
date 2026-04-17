@@ -242,7 +242,7 @@ function CaseStudy() {
                 marginBottom: '16px',
               }}
             >
-              Quest Log reframes the gym as a game world you're physically progressing through. Every workout completed is a quest cleared. Every session adds XP. Your streak is a resource you protect. The journey map, a illustrated RPG world, advances as you train. You're not logging reps. You're pushing deeper into new territory.
+              What if we started thinking about exercise, health, and fitness more like a game? One where you are the main character, and every time you train, eat well, or make a positive health choice, you are getting stronger and leveling up. Because that is essentially what is happening. Your body is keeping score whether you track it or not.
             </p>
             <p
               style={{
@@ -253,7 +253,7 @@ function CaseStudy() {
                 lineHeight: 1.75,
               }}
             >
-              The aesthetic direction was deliberate. Warm illustration over dark pixel art. Chunky, rounded UI over clinical dashboards. The design borrows from games like Moonlighter and apps like Duolingo, apps people open because they want to, not because they have to. The goal was to make the gym feel like somewhere your character needs to be.
+              Quest Log makes that progress visible and exciting. Goals and milestones become checkpoints. Streaks become a resource worth protecting. The journey map advances as you train, so you can put a pin on where you actually are, not just stare at a screen full of numbers. You are not logging reps. You are building a character.
             </p>
           </div>
 
