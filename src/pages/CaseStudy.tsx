@@ -2,7 +2,11 @@ import SectionHeader from '../components/SectionHeader'
 import CyclingIcon from '../components/CyclingIcon'
 import ScreenshotCarousel from '../components/ScreenshotCarousel'
 
-function CaseStudy() {
+interface CaseStudyProps {
+  onViewApp: () => void
+}
+
+function CaseStudy({ onViewApp }: CaseStudyProps) {
   return (
     <div>
       {/* HERO BANNER */}
@@ -60,8 +64,8 @@ function CaseStudy() {
           }}
         >
           {/* View Live App CTA */}
-          <a
-            href="https://quest-log-topaz.vercel.app/"
+          <button
+            onClick={onViewApp}
             className="btn-primary"
             style={{
               background: '#F97316',
@@ -73,13 +77,13 @@ function CaseStudy() {
               fontWeight: 600,
               fontSize: '0.95rem',
               boxShadow: '0 4px 0 0 #C2410C',
-              textDecoration: 'none',
+              cursor: 'pointer',
               display: 'inline-block',
               transition: 'transform 0.1s ease, box-shadow 0.1s ease',
             }}
           >
             View Live App →
-          </a>
+          </button>
 
           {/* Badges */}
           <div
@@ -864,8 +868,8 @@ function CaseStudy() {
             marginTop: '32px',
           }}
         >
-          <a
-            href="https://quest-log-topaz.vercel.app/"
+          <button
+            onClick={onViewApp}
             className="btn-primary"
             style={{
               background: '#F97316',
@@ -877,13 +881,13 @@ function CaseStudy() {
               fontWeight: 600,
               fontSize: '0.95rem',
               boxShadow: '0 4px 0 0 #C2410C',
-              textDecoration: 'none',
+              cursor: 'pointer',
               display: 'inline-block',
               transition: 'transform 0.1s ease, box-shadow 0.1s ease',
             }}
           >
             View Live App →
-          </a>
+          </button>
           <a
             href="mailto:hello@kevincchow.com"
             className="btn-secondary"
