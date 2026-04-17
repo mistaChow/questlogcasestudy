@@ -530,7 +530,7 @@ function CaseStudy() {
             {
               number: '02',
               title: 'Designing for one user: yourself.',
-              body: "No user research. No testing sessions. No feedback rounds. The loop is: build it, use it at the gym the next morning, adjust what broke. That's faster than any process I've run on a team. But you have to be ruthless about catching your own blind spots. The things that feel obvious to you are invisible to everyone else.",
+              body: "This app is not being tested against flat Figma slides in a conference room. It is being tested in real time, mid-workout, under actual conditions. The research loop is guerrilla: build it, take it to the gym, use it yourself, then hand your phone to the person on the next bench and watch what happens. Gym friends were the first testers. Then regulars at the local gym. Conversations on the floor, honest reactions, friction spotted in the moment. So far six other gym members are actively using Quest Log and that number is growing. Real users, real sessions, real feedback.",
             },
             {
               number: '03',
