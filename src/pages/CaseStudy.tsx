@@ -689,7 +689,7 @@ function CaseStudy() {
               margin: '24px auto 48px',
             }}
           >
-            Quest Log is a personal tool first. It ships when it's ready, not when it's perfect. The features below represent where the build stands today and where it's heading. The map is still being drawn.
+            Quest Log is a personal tool first. It ships when it's ready, not when it's perfect. The features below represent where the build stands today and where it's heading. The map is still being drawn. It's a quest on its own.
           </p>
 
           <div
