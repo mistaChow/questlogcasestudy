@@ -524,17 +524,17 @@ function CaseStudy() {
           {[
             {
               number: '01',
-              title: 'Making gamification feel earned, not gimmicky.',
+              title: 'Designing rewards into the parts nobody gets excited about.',
               body: 'Every part of the product needs its own answer to the same question: why would anyone actually enjoy doing this? Logging a workout is easy to make engaging. But what about tracking which supplements are sitting in your cupboard at home? That is a genuinely boring task. The design challenge was figuring out how to inject enough personality, visual feedback, and reward into the mundane parts so that the whole system feels worth returning to. Dopamine is not just for the big moments. The goal was to make even the small interactions feel like they counted.',
             },
             {
               number: '02',
-              title: 'Designing for one user: yourself.',
+              title: 'The gym floor is the testing room.',
               body: "This app is not being tested against flat Figma slides in a conference room. It is being tested in real time, mid-workout, under actual conditions. The research loop is guerrilla: build it, take it to the gym, use it yourself, then hand your phone to the person on the next bench and watch what happens. Gym friends were the first testers. Then regulars at the local gym. Conversations on the floor, honest reactions, friction spotted in the moment. So far six other gym members are actively using Quest Log and that number is growing. Real users, real sessions, real feedback.",
             },
             {
               number: '03',
-              title: 'Generating illustration assets without a design system handoff.',
+              title: 'Defining a visual direction as a team of one.',
               body: "As a one-person team, every visual decision lands on the same desk as every technical decision. Building a design system that is consistent, scalable, and actually codeable is its own challenge. Then comes the harder question: what does this thing look like? Do we go pixel art? Flat minimalism? Muted tones? Something warm and illustrated? Each direction carries a different feeling and a different workload. The risk with a fitness app wrapped in game aesthetics is that the visuals start competing with the function. Art direction that is too loud becomes noise. Too subtle and the game feel disappears entirely. The answer was to land somewhere deliberate: warm, rounded, illustrated but not overdone. A style that supports the goal without distracting from it.",
             },
           ].map((challenge, i) => (
