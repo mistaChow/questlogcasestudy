@@ -27,7 +27,7 @@ function CaseStudy() {
           }}
         >
           <source src="/banner.mp4" type="video/mp4" />
-          <img src="/banner.png" alt="Quest Log — Your fitness adventure" style={{ width: '100%', height: 'auto', display: 'block' }} />
+          <img src="/banner.png" alt="Quest Log: Your fitness adventure" style={{ width: '100%', height: 'auto', display: 'block' }} />
         </video>
 
         {/* Fade into page background at the bottom */}
@@ -222,7 +222,7 @@ function CaseStudy() {
               marginBottom: 0,
               lineHeight: 1.6,
             }}>
-              Quest Log home screen: your quests, your stats, your adventure — all in one place.
+              Quest Log home screen: your quests, your stats, your adventure. All in one place.
             </p>
           </div>
         </div>
@@ -658,7 +658,7 @@ function CaseStudy() {
 
           <img
             src="/screenshots/dungeongym.png"
-            alt="Dungeon Gym — before and after upgrade"
+            alt="Dungeon Gym: before and after upgrade"
             style={{
               width: '100%',
               height: 'auto',
