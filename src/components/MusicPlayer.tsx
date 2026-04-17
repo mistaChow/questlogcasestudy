@@ -6,16 +6,29 @@ function MusicPlayer() {
   const [volume, setVolume] = useState(0.5)
   const [expanded, setExpanded] = useState(false)
 
-  // Set initial volume and autoplay
+  // Attempt autoplay immediately; if blocked, retry on first user interaction
   useEffect(() => {
     const audio = audioRef.current
     if (!audio) return
     audio.volume = volume
+
     audio.play().then(() => {
       setPlaying(true)
     }).catch(() => {
-      // Browser blocked autoplay — user must interact first
-      setPlaying(false)
+      // Browser blocked autoplay — wait for first user gesture then try again
+      const tryPlay = () => {
+        audio.play().then(() => {
+          setPlaying(true)
+        }).catch(() => {})
+        window.removeEventListener('click',     tryPlay)
+        window.removeEventListener('scroll',    tryPlay)
+        window.removeEventListener('keydown',   tryPlay)
+        window.removeEventListener('touchstart', tryPlay)
+      }
+      window.addEventListener('click',      tryPlay, { once: true })
+      window.addEventListener('scroll',     tryPlay, { once: true })
+      window.addEventListener('keydown',    tryPlay, { once: true })
+      window.addEventListener('touchstart', tryPlay, { once: true })
     })
   }, [])
 
