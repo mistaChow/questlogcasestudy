@@ -535,7 +535,7 @@ function CaseStudy() {
             {
               number: '03',
               title: 'Generating illustration assets without a design system handoff.',
-              body: "Every icon, banner, and region tile is generated externally and manually integrated into the codebase. There's no Figma-to-code pipeline. Maintaining visual consistency across AI-generated assets from different sessions and tools requires opinionated constraints upfront: fixed aspect ratios, a strict color palette, and a reference image you don't deviate from.",
+              body: "As a one-person team, every visual decision lands on the same desk as every technical decision. Building a design system that is consistent, scalable, and actually codeable is its own challenge. Then comes the harder question: what does this thing look like? Do we go pixel art? Flat minimalism? Muted tones? Something warm and illustrated? Each direction carries a different feeling and a different workload. The risk with a fitness app wrapped in game aesthetics is that the visuals start competing with the function. Art direction that is too loud becomes noise. Too subtle and the game feel disappears entirely. The answer was to land somewhere deliberate: warm, rounded, illustrated but not overdone. A style that supports the goal without distracting from it.",
             },
           ].map((challenge, i) => (
             <div
