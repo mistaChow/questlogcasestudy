@@ -222,7 +222,7 @@ function CaseStudy() {
               marginBottom: 0,
               lineHeight: 1.6,
             }}>
-              Using Excel or standard workout apps is stale and lifeless. Tracking reps in a spreadsheet makes fitness feel like admin work, not an adventure.
+              Quest Log home screen: your quests, your stats, your adventure — all in one place.
             </p>
           </div>
         </div>
@@ -309,6 +309,7 @@ function CaseStudy() {
 
       {/* KEY FEATURES SECTION */}
       <section
+        className="section-padded"
         style={{
           background: '#FEF9EE',
           padding: '80px 24px',
@@ -511,6 +512,7 @@ function CaseStudy() {
 
       {/* CHALLENGES SECTION */}
       <section
+        className="section-padded"
         style={{
           background: '#FFFBF5',
           padding: '80px 24px',
@@ -592,6 +594,7 @@ function CaseStudy() {
 
       {/* DUNGEON GYM SECTION */}
       <section
+        className="section-padded"
         style={{
           background: '#FEF9EE',
           padding: '80px 24px',
@@ -668,7 +671,7 @@ function CaseStudy() {
       </section>
 
       {/* CONCEPT ART SECTION */}
-      <section style={{ background: '#FFFBF5', padding: '80px 24px' }}>
+      <section className="section-padded" style={{ background: '#FEF9EE', padding: '80px 24px' }}>
         <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
           <SectionHeader label="CONCEPT ART" heading="The journey map is coming." />
           <p
@@ -700,6 +703,7 @@ function CaseStudy() {
 
       {/* WHAT'S NEXT SECTION */}
       <section
+        className="section-padded"
         style={{
           background: '#FFFBF5',
           padding: '80px 24px',
@@ -795,7 +799,7 @@ function CaseStudy() {
                 'Cloud sync via Google Sign-In + Firestore',
                 'Hero character progression + avatar',
                 'Micro-animations and polish pass',
-                'All six journey map regions fully built',
+                'All journey map regions fully built',
                 'Regional shops: spend Swoll Coins on outfits and gear',
                 'Dungeon Gym: buy and upgrade your personal training space using Swoll Coins',
               ].map((item, i) => (
@@ -961,8 +965,8 @@ function CaseStudy() {
           }
         }
         @media (max-width: 767px) {
-          section[style] {
-            padding: 60px 20px;
+          .section-padded {
+            padding: 60px 20px !important;
           }
           .hero-overlay {
             position: static !important;
@@ -976,6 +980,16 @@ function CaseStudy() {
           .hero-badges {
             flex-direction: column !important;
             align-items: center !important;
+          }
+          .card-media {
+            min-height: 180px !important;
+          }
+          .card-inner {
+            flex-direction: column !important;
+          }
+          .card-content {
+            border-left: none !important;
+            border-top: 1px solid #F5F5F4;
           }
         }
         .btn-primary:hover {
