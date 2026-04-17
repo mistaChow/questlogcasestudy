@@ -667,6 +667,37 @@ function CaseStudy() {
         </div>
       </section>
 
+      {/* CONCEPT ART SECTION */}
+      <section style={{ background: '#FFFBF5', padding: '80px 24px' }}>
+        <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
+          <SectionHeader label="CONCEPT ART" heading="The journey map is coming." />
+          <p
+            style={{
+              fontFamily: 'Inter, sans-serif',
+              fontWeight: 500,
+              color: '#57534E',
+              fontSize: '1rem',
+              lineHeight: 1.75,
+              marginTop: '24px',
+              maxWidth: '600px',
+            }}
+          >
+            Each region of the journey map represents a new zone unlocked through consistent training. These are early concept pieces exploring the visual direction for regions still in development. The goal is a world that feels alive and worth pushing into.
+          </p>
+
+          <ScreenshotCarousel
+            maxWidth="65%"
+            slides={[
+              { src: '/journeymap/Frame 5.png', caption: 'Haunted Marshes · Emberveil Peaks' },
+              { src: '/journeymap/Frame 6.png', caption: 'Aquasword Fields · Field of Bones' },
+              { src: '/journeymap/Frame 8.png', caption: 'Ancient Sands · Crystal Caverns' },
+              { src: '/journeymap/Frame 9.png', caption: 'Ruined Wastes · Sunken Depths' },
+              { src: '/journeymap/Frame 10.png', caption: 'Flowerfield Vale · Skullpeak Glaciers' },
+            ]}
+          />
+        </div>
+      </section>
+
       {/* WHAT'S NEXT SECTION */}
       <section
         style={{
@@ -787,37 +818,6 @@ function CaseStudy() {
             </div>
           </div>
 
-        </div>
-      </section>
-
-      {/* CONCEPT ART SECTION */}
-      <section style={{ background: '#FFFBF5', padding: '80px 24px' }}>
-        <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
-          <SectionHeader label="CONCEPT ART" heading="The journey map is coming." />
-          <p
-            style={{
-              fontFamily: 'Inter, sans-serif',
-              fontWeight: 500,
-              color: '#57534E',
-              fontSize: '1rem',
-              lineHeight: 1.75,
-              marginTop: '24px',
-              maxWidth: '600px',
-            }}
-          >
-            Each region of the journey map represents a new zone unlocked through consistent training. These are early concept pieces exploring the visual direction for regions still in development. The goal is a world that feels alive and worth pushing into.
-          </p>
-
-          <ScreenshotCarousel
-            maxWidth="65%"
-            slides={[
-              { src: '/journeymap/Frame 5.png', caption: 'Haunted Marshes · Emberveil Peaks' },
-              { src: '/journeymap/Frame 6.png', caption: 'Aquasword Fields · Field of Bones' },
-              { src: '/journeymap/Frame 8.png', caption: 'Ancient Sands · Crystal Caverns' },
-              { src: '/journeymap/Frame 9.png', caption: 'Ruined Wastes · Sunken Depths' },
-              { src: '/journeymap/Frame 10.png', caption: 'Flowerfield Vale · Skullpeak Glaciers' },
-            ]}
-          />
         </div>
       </section>
 
