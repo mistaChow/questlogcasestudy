@@ -370,7 +370,7 @@ function CaseStudy() {
                 title: 'Journey Map',
                 wip: true,
                 video: '/videos/Regionpreviews.mp4',
-                description: 'Your progress visualised as a illustrated RPG world. Each region is a new zone unlocked through consistent training. Six regions planned: Iron Field Woods, Plains of Sorrows, Emberveil Peaks, Skullpeak Glaciers, Sunken Ruins of Aldara, Stormreach Cliffs.',
+                description: 'Your fitness journey is now more than just gains. Each session pushes you deeper into a virtual world, unlocking new regions as you train. Two journeys in one.',
               },
             ].map((card, i) => (
               <div
