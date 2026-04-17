@@ -242,7 +242,7 @@ function CaseStudy() {
                 marginBottom: '16px',
               }}
             >
-              Quest Log reframes the gym as a game world you're physically progressing through. Every workout completed is a quest cleared. Every session adds XP. Your streak is a resource you protect. The journey map, a hand-illustrated RPG world, advances as you train. You're not logging reps. You're pushing deeper into new territory.
+              Quest Log reframes the gym as a game world you're physically progressing through. Every workout completed is a quest cleared. Every session adds XP. Your streak is a resource you protect. The journey map, a illustrated RPG world, advances as you train. You're not logging reps. You're pushing deeper into new territory.
             </p>
             <p
               style={{
@@ -370,7 +370,7 @@ function CaseStudy() {
                 title: 'Journey Map',
                 wip: true,
                 video: '/videos/Regionpreviews.mp4',
-                description: 'Your progress visualised as a hand-illustrated RPG world. Each region is a new zone unlocked through consistent training. Six regions planned: Iron Field Woods, Plains of Sorrows, Emberveil Peaks, Skullpeak Glaciers, Sunken Ruins of Aldara, Stormreach Cliffs.',
+                description: 'Your progress visualised as a illustrated RPG world. Each region is a new zone unlocked through consistent training. Six regions planned: Iron Field Woods, Plains of Sorrows, Emberveil Peaks, Skullpeak Glaciers, Sunken Ruins of Aldara, Stormreach Cliffs.',
               },
             ].map((card, i) => (
               <div
