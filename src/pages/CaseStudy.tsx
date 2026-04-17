@@ -525,7 +525,7 @@ function CaseStudy() {
             {
               number: '01',
               title: 'Making gamification feel earned, not gimmicky.',
-              body: 'Coins and XP only work if the underlying tracking tool is solid. The risk with gamification is that it papers over a bad product with candy. The approach here was to build the workout builder as a clean, functional tool first, then layer rewards on top. The game mechanics only feel satisfying because the core loop is actually useful.',
+              body: 'Every part of the product needs its own answer to the same question: why would anyone actually enjoy doing this? Logging a workout is easy to make engaging. But what about tracking which supplements are sitting in your cupboard at home? That is a genuinely boring task. The design challenge was figuring out how to inject enough personality, visual feedback, and reward into the mundane parts so that the whole system feels worth returning to. Dopamine is not just for the big moments. The goal was to make even the small interactions feel like they counted.',
             },
             {
               number: '02',
