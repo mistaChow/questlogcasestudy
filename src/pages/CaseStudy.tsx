@@ -2,11 +2,7 @@ import SectionHeader from '../components/SectionHeader'
 import CyclingIcon from '../components/CyclingIcon'
 import ScreenshotCarousel from '../components/ScreenshotCarousel'
 
-interface CaseStudyProps {
-  onViewApp: () => void
-}
-
-function CaseStudy({ onViewApp }: CaseStudyProps) {
+function CaseStudy() {
   return (
     <div>
       {/* HERO BANNER */}
@@ -64,8 +60,10 @@ function CaseStudy({ onViewApp }: CaseStudyProps) {
           }}
         >
           {/* View Live App CTA */}
-          <button
-            onClick={onViewApp}
+          <a
+            href="https://quest-log-topaz.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="btn-primary"
             style={{
               background: '#F97316',
@@ -77,13 +75,13 @@ function CaseStudy({ onViewApp }: CaseStudyProps) {
               fontWeight: 600,
               fontSize: '0.95rem',
               boxShadow: '0 4px 0 0 #C2410C',
-              cursor: 'pointer',
+              textDecoration: 'none',
               display: 'inline-block',
               transition: 'transform 0.1s ease, box-shadow 0.1s ease',
             }}
           >
             View Live App →
-          </button>
+          </a>
 
           {/* Badges */}
           <div
@@ -868,8 +866,10 @@ function CaseStudy({ onViewApp }: CaseStudyProps) {
             marginTop: '32px',
           }}
         >
-          <button
-            onClick={onViewApp}
+          <a
+            href="https://quest-log-topaz.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="btn-primary"
             style={{
               background: '#F97316',
@@ -881,13 +881,13 @@ function CaseStudy({ onViewApp }: CaseStudyProps) {
               fontWeight: 600,
               fontSize: '0.95rem',
               boxShadow: '0 4px 0 0 #C2410C',
-              cursor: 'pointer',
+              textDecoration: 'none',
               display: 'inline-block',
               transition: 'transform 0.1s ease, box-shadow 0.1s ease',
             }}
           >
             View Live App →
-          </button>
+          </a>
           <a
             href="mailto:hello@kevincchow.com"
             className="btn-secondary"
